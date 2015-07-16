@@ -6,11 +6,42 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		0488041E1B57FDB4000449D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 048804191B57FDB1000449D2 /* SearchMap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 048803F41B57FDB0000449D2;
+			remoteInfo = SearchMap;
+		};
+		048804201B57FDB4000449D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 048804191B57FDB1000449D2 /* SearchMap.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 048804091B57FDB1000449D2;
+			remoteInfo = SearchMapTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		048804191B57FDB1000449D2 /* SearchMap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SearchMap.xcodeproj; path = SearchMap/SearchMap.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		048803E21B57F305000449D2 = {
 			isa = PBXGroup;
 			children = (
+				048804191B57FDB1000449D2 /* SearchMap.xcodeproj */,
 			);
+			sourceTree = "<group>";
+		};
+		0488041A1B57FDB1000449D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0488041F1B57FDB4000449D2 /* SearchMap.app */,
+				048804211B57FDB4000449D2 /* SearchMapTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -30,11 +61,34 @@
 			);
 			mainGroup = 048803E21B57F305000449D2;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0488041A1B57FDB1000449D2 /* Products */;
+					ProjectRef = 048804191B57FDB1000449D2 /* SearchMap.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0488041F1B57FDB4000449D2 /* SearchMap.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SearchMap.app;
+			remoteRef = 0488041E1B57FDB4000449D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		048804211B57FDB4000449D2 /* SearchMapTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SearchMapTests.xctest;
+			remoteRef = 048804201B57FDB4000449D2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		048803E71B57F305000449D2 /* Debug */ = {
