@@ -67,7 +67,7 @@ class ViewController: UIViewController {
         
         let btnTitle = sender.currentTitle!
         mapView.removeAnnotations(mapView.annotations)
-        println(btnTitle)
+        //println(btnTitle)
         switch btnTitle {
         case Optional.Some("旅馆"):
             searchMap("hotel")
