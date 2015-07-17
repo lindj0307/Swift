@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         case Optional.Some("旅馆"):
             searchMap("hotel")
         case Optional.Some("医院"):
-            searchMap("hotel")
+            searchMap("hospital")
         case Optional.Some("超市"):
             searchMap("supermarket")
         default:
