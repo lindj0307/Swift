@@ -16,11 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wsd-dN-7VJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILx-ew-xgl">
                                 <rect key="frame" x="140" y="508" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="YLD-bM-Xne"/>
-                                    <constraint firstAttribute="width" constant="40" id="nyk-EZ-h8G"/>
+                                    <constraint firstAttribute="height" constant="40" id="0Vn-1j-Wyh"/>
+                                    <constraint firstAttribute="width" constant="40" id="wxM-5e-GGV"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,38 +35,66 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzB-lb-K3x">
                                 <rect key="frame" x="145" y="454" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.5" green="0.5" blue="0.82087787828947367" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="cJR-Rg-g5Z"/>
+                                    <constraint firstAttribute="height" constant="30" id="ceY-Tc-4C2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="族馆">
                                     <color key="titleColor" red="0.37254902719999999" green="0.0" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="BbO-lN-j2j"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xm-gz-apY">
                                 <rect key="frame" x="145" y="454" width="30" height="30"/>
                                 <color key="backgroundColor" red="0.60616626060636869" green="0.82087787828947367" blue="0.72907153395046131" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pdl-NK-VZJ"/>
+                                    <constraint firstAttribute="width" constant="30" id="SzR-I4-uCo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="医院">
                                     <color key="titleColor" red="0.1333333333" green="0.64705882349999999" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="R4V-SX-61z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpG-mK-eFE">
                                 <rect key="frame" x="145" y="454" width="30" height="30"/>
-                                <color key="backgroundColor" red="0.3507579782936156" green="0.82087787830000003" blue="0.79773887486166617" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.82087787830000003" green="0.49854885886827072" blue="0.50565459737186724" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Yno-Uc-UmD"/>
+                                    <constraint firstAttribute="height" constant="30" id="y4h-gE-NB5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="超市">
-                                    <color key="titleColor" red="0.90543264150619507" green="0.40308435003464516" blue="0.48177368856632458" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.53235652378220877" green="0.2258090180196223" blue="0.90543264150619507" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="358-s0-d0B"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="ILx-ew-xgl" secondAttribute="centerX" id="2Id-e5-Dr7"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ILx-ew-xgl" secondAttribute="bottom" constant="20" id="Oj8-oU-N8T"/>
-                            <constraint firstItem="ILx-ew-xgl" firstAttribute="top" secondItem="DzB-lb-K3x" secondAttribute="bottom" constant="24" id="Yt1-yx-Vxd"/>
-                            <constraint firstItem="5xm-gz-apY" firstAttribute="baseline" secondItem="DzB-lb-K3x" secondAttribute="baseline" id="dXX-nY-hvV"/>
-                            <constraint firstItem="5xm-gz-apY" firstAttribute="leading" secondItem="UpG-mK-eFE" secondAttribute="leading" id="hco-TD-Jj1"/>
-                            <constraint firstItem="DzB-lb-K3x" firstAttribute="leading" secondItem="UpG-mK-eFE" secondAttribute="leading" id="l36-C2-uS7"/>
-                            <constraint firstItem="UpG-mK-eFE" firstAttribute="baseline" secondItem="DzB-lb-K3x" secondAttribute="baseline" id="oEk-Xt-ATw"/>
-                            <constraint firstItem="DzB-lb-K3x" firstAttribute="centerX" secondItem="ILx-ew-xgl" secondAttribute="centerX" id="qHi-AH-Lql"/>
+                            <constraint firstItem="Wsd-dN-7VJ" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="2EZ-wN-fXi"/>
+                            <constraint firstItem="Wsd-dN-7VJ" firstAttribute="centerX" secondItem="ILx-ew-xgl" secondAttribute="centerX" id="2Uh-Sh-qJM"/>
+                            <constraint firstItem="Wsd-dN-7VJ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="2pD-Nl-vfG"/>
+                            <constraint firstAttribute="centerX" secondItem="ILx-ew-xgl" secondAttribute="centerX" id="3zB-Sp-Dzi"/>
+                            <constraint firstItem="Wsd-dN-7VJ" firstAttribute="centerX" secondItem="UpG-mK-eFE" secondAttribute="centerX" id="6dK-mK-MYR"/>
+                            <constraint firstItem="Wsd-dN-7VJ" firstAttribute="centerX" secondItem="5xm-gz-apY" secondAttribute="centerX" id="9DB-fx-hd7"/>
+                            <constraint firstItem="ILx-ew-xgl" firstAttribute="top" secondItem="5xm-gz-apY" secondAttribute="bottom" constant="24" id="AAm-mR-9Nf"/>
+                            <constraint firstItem="ILx-ew-xgl" firstAttribute="top" secondItem="UpG-mK-eFE" secondAttribute="bottom" constant="24" id="Rgs-cu-YC3"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ILx-ew-xgl" secondAttribute="bottom" constant="20" id="Zuy-mB-NPw"/>
+                            <constraint firstItem="Wsd-dN-7VJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eg1-PF-HHa"/>
+                            <constraint firstItem="Wsd-dN-7VJ" firstAttribute="centerX" secondItem="DzB-lb-K3x" secondAttribute="centerX" id="fEz-iQ-jh3"/>
+                            <constraint firstItem="ILx-ew-xgl" firstAttribute="top" secondItem="DzB-lb-K3x" secondAttribute="bottom" constant="24" id="yls-LR-ycO"/>
                         </constraints>
                     </view>
                     <connections>
@@ -71,11 +102,12 @@
                         <outlet property="btnHotel" destination="DzB-lb-K3x" id="tYx-oS-7Pb"/>
                         <outlet property="btnMenu" destination="ILx-ew-xgl" id="XW8-qR-HLm"/>
                         <outlet property="btnSM" destination="UpG-mK-eFE" id="brK-Kr-GLB"/>
+                        <outlet property="mapView" destination="Wsd-dN-7VJ" id="YSM-bf-4zz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="377.71999999999997"/>
+            <point key="canvasLocation" x="162" y="377"/>
         </scene>
     </scenes>
     <resources>
