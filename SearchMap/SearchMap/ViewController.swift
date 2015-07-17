@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         //设置显示
         mapView.setRegion(region, animated: true)
         
+        searchMap("place")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +62,22 @@ class ViewController: UIViewController {
             self.btnSM.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.5,1.5), CGAffineTransformMakeTranslation(80, -25))
             }, completion:nil)
     }
+    
     @IBAction func buttonReset(sender: AnyObject) {
+        
+        let btnTitle = sender.currentTitle!
+        mapView.removeAnnotations(mapView.annotations)
+        println(btnTitle)
+        switch btnTitle {
+        case Optional.Some("旅馆"):
+            searchMap("hotel")
+        case Optional.Some("医院"):
+            searchMap("hotel")
+        case Optional.Some("超市"):
+            searchMap("supermarket")
+        default:
+            searchMap("supermarket")
+        }
         reset()
     }
     
@@ -82,7 +99,39 @@ class ViewController: UIViewController {
             
         }, completion: nil)
     }
+    
+    //增加兴趣地点
+    func addLocation(title:String,latitude:CLLocationDegrees,longtitude:CLLocationDegrees) {
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
+        let annotation  = MyAnnotation(coordinate: location, title: title)
+        mapView.addAnnotation(annotation)
+        
+    }
+    
+    //搜索
+    func searchMap(place:String) {
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = place
+        //搜索当前设置区域
+        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        request.region = MKCoordinateRegion(center: initialLocation.coordinate, span: span)
+        //启动搜索并返回结果保存在数组中
+        let search = MKLocalSearch(request: request)
+        search.startWithCompletionHandler { (response:MKLocalSearchResponse!, error:NSError!) -> Void in
+            for item in response.mapItems as![MKMapItem] {
+                self.addLocation(item.name, latitude: item.placemark.location.coordinate.latitude, longtitude: item.placemark.location.coordinate.longitude)
+            }
+        }
+    }
+    
 
 
 }
+
+
+
+
+
+
+
 

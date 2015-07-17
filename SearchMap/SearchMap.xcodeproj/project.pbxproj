@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04038E291B58B41B00ABEDF0 /* MyAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04038E281B58B41B00ABEDF0 /* MyAnnotation.swift */; };
 		048803FA1B57FDB0000449D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048803F91B57FDB0000449D2 /* AppDelegate.swift */; };
 		048803FC1B57FDB0000449D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048803FB1B57FDB0000449D2 /* ViewController.swift */; };
 		048803FF1B57FDB0000449D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048803FD1B57FDB0000449D2 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04038E281B58B41B00ABEDF0 /* MyAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAnnotation.swift; sourceTree = "<group>"; };
 		048803F41B57FDB0000449D2 /* SearchMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048803F81B57FDB0000449D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048803F91B57FDB0000449D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 		048803F61B57FDB0000449D2 /* SearchMap */ = {
 			isa = PBXGroup;
 			children = (
-				048803F91B57FDB0000449D2 /* AppDelegate.swift */,
+				04038E281B58B41B00ABEDF0 /* MyAnnotation.swift */,
 				048803FB1B57FDB0000449D2 /* ViewController.swift */,
 				048803FD1B57FDB0000449D2 /* Main.storyboard */,
 				048804001B57FDB0000449D2 /* Images.xcassets */,
@@ -90,6 +92,7 @@
 		048803F71B57FDB0000449D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				048803F91B57FDB0000449D2 /* AppDelegate.swift */,
 				048803F81B57FDB0000449D2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -214,6 +217,7 @@
 			files = (
 				048803FC1B57FDB0000449D2 /* ViewController.swift in Sources */,
 				048803FA1B57FDB0000449D2 /* AppDelegate.swift in Sources */,
+				04038E291B58B41B00ABEDF0 /* MyAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +413,7 @@
 				048804151B57FDB1000449D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		048804161B57FDB1000449D2 /* Build configuration list for PBXNativeTarget "SearchMapTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				048804181B57FDB1000449D2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
