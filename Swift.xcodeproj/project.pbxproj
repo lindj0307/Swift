@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
+		043FDA291B5F262500E50567 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043FDA231B5F262200E50567 /* TheProgramingOfSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 043FDA191B5F262200E50567;
+			remoteInfo = TheProgramingOfSwift;
+		};
 		0488041E1B57FDB4000449D2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 048804191B57FDB1000449D2 /* SearchMap.xcodeproj */;
@@ -24,13 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043FDA231B5F262200E50567 /* TheProgramingOfSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TheProgramingOfSwift.xcodeproj; path = TheProgramingOfSwift/TheProgramingOfSwift.xcodeproj; sourceTree = "<group>"; };
 		048804191B57FDB1000449D2 /* SearchMap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SearchMap.xcodeproj; path = SearchMap/SearchMap.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		043FDA241B5F262200E50567 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				043FDA2A1B5F262500E50567 /* TheProgramingOfSwift */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		048803E21B57F305000449D2 = {
 			isa = PBXGroup;
 			children = (
+				043FDA231B5F262200E50567 /* TheProgramingOfSwift.xcodeproj */,
 				048804191B57FDB1000449D2 /* SearchMap.xcodeproj */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +83,10 @@
 					ProductGroup = 0488041A1B57FDB1000449D2 /* Products */;
 					ProjectRef = 048804191B57FDB1000449D2 /* SearchMap.xcodeproj */;
 				},
+				{
+					ProductGroup = 043FDA241B5F262200E50567 /* Products */;
+					ProjectRef = 043FDA231B5F262200E50567 /* TheProgramingOfSwift.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -74,6 +95,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		043FDA2A1B5F262500E50567 /* TheProgramingOfSwift */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = TheProgramingOfSwift;
+			remoteRef = 043FDA291B5F262500E50567 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		0488041F1B57FDB4000449D2 /* SearchMap.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
