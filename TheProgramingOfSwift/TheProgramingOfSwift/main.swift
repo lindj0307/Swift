@@ -19,7 +19,7 @@ println("The Status code is \(justTheStatusCode)")
 println(http404Error.0)
 println(http404Error.1)
 println(http200Status)
-print("\n")
+print("\n") 
 
 //Optionals 可选 用来处理可能缺失的情况
 let possibleNumber = "123"
@@ -243,9 +243,9 @@ print("\(total.vowels) vowels and \(total.consonants) consonants and \(total.oth
 func join(s1: String, s2: String, joiner: String) -> String {
     return s1 + joiner + s2 + "\n"
 }
-print(join("hello","Joey",","))
+print(join("Hello","Joey",","))
 
-//带外部参数并且提供默认值
+//..带外部参数并且提供默认值
 func anotherJoin(string s1: String, toString s2: String, withJoiner joiner: String = " ") -> String {
      return s1 + joiner + s2 + "\n"
 }
@@ -264,17 +264,195 @@ let containV = containCharacter(string: "sfsdfdsf", characterToFind: "v")
 print(containV)
 print("\n")
 
-//可变参数
+//..可变参数: 一个可变参数接受零个或多个指定类型的值.(...)
+func arithmeticMean(numbers: Double...) -> Double {
+    var total: Double = 0
+    for number in numbers {
+        total += number
+    }
+    return total / Double(numbers.count)
+}
+print(arithmeticMean(1,2,3,4,5,6,7).description)
+print("\n")
 
+//..In-Out参数  inout 类似C#ref,out关键字
+func swapTwoInts (inout #a: Int, inout #b: Int) {
+    let temp = a
+    a = b
+    b = temp
+}
 
+var firstInt = 3
+var secondInt = 17
+swapTwoInts(a: &firstInt, b: &secondInt)
+print("firstInt is now \(firstInt), and SecondInt is now \(secondInt)\n")
+print("\n")
 
+//..函数类型 (Int,Int) -> Int
+func addTwoInts(a: Int, b: Int) -> Int {
+    return a + b
+}
 
+func multiplyTwoInts(a: Int, b: Int) -> Int {
+    return a * b
+}
+var mathFunction: (Int, Int) -> Int = addTwoInts
+print("Result: \(mathFunction(2,3))\n")
+mathFunction = multiplyTwoInts
+print("Result: \(mathFunction(2,3))\n")
 
+//..作为参数的函数类型
+func printMathResult(mathFunction: (Int, Int) -> Int, a: Int, b: Int){
+    print("Result: \(mathFunction(a,b))\n")
+}
+printMathResult(addTwoInts, 3, 5)
 
+//..函数返回函数类型  嵌套函数 可读性差 实际应用中应该比较少用  跳过
 
+//闭包 不是很能理解,这东西用来干什么的
+//..闭包是功能性自包含模板,可以在代码中被传递和使用.
 
+//捕获 Capture 同闭包  无法理解
 
+//枚举
+//.. 枚举定义了一个通用类型的一组相关的值,你可以在代码中以一个安全的方式来使用它们
+enum CompassPoint {
+    case North
+    case South
+    case East
+    case West
+}
+var directionToHead = CompassPoint.West
 
+directionToHead = .East
+switch directionToHead {
+case .North:
+    print("Lots of planets have a north \n")
+case .South:
+    print("Watch out for penguins \n")
+case .East:
+    print("Where the sun rises \n")
+case .West:
+    print("Where the skies are blue \n")
+}
 
+//类和结构体
+//..共同点
+//....1.定义属性用于存储值
+//....2.定义方法用于提供功能
+//....3.定义下标用于通过下标语法访问值
+//....4.定义初始化器用于生成初始化值
+//....5.通过扩展以增加默认实现的功能
+//....6.符合协议以对某类提供标准功能
+//..与结构相比,类还有如下附加功能:
+//....1.继承允许一个类继承另外一个类的特征
+//....2.类型转换允许在运行时检查和解析一个类的实例对象
+//....3.取消初始化器允许一个类实例释放任何其所被分配的资源
+//....4.引用计数允许以一个类多次引用
+//..语法
+class SomeClass {
+    
+}
+struct SomeStructure {
+    
+}
+
+struct Resolution {
+    var width = 0
+    var height = 0
+}
+
+class VideoMode {
+    var resolution = Resolution()
+    var interlaced = false
+    var frameRate = 0.0
+    var name: String?
+}
+let someResolution = Resolution()
+let someVideoMode = VideoMode()
+
+print(someResolution.width)
+print("\n")
+print(someVideoMode.resolution.width)
+
+//属性
+//..计算属性
+struct Point {
+    var x = 0.0, y = 0.0
+}
+
+struct Size {
+    var width = 0.0, height = 0.0
+}
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        //便捷setter 如果没有声明newCenter 就会用默认名称newValue     还有一个oldValue
+        set(newCenter) {
+            origin.x = newCenter.x - (size.width / 2)
+            origin.y = newCenter.y - (size.height / 2)
+        }
+    }
+}
+var square = Rect(origin: Point(x: 0.0, y: 0.0), size: Size(width: 10.0, height: 10.0))
+let initialSquareCenter = square.center
+square.center = Point(x: 15.0, y: 15.0)
+print("square.origin is now at (\(square.origin.x),\(square.origin.y))\n")
+//..属性监视器
+//....willSet在设置新的值之前调用
+//....didSet在新的值被设置后立即调用
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet (newTotalSteps) {
+            print("About to set totalSteps to \(newTotalSteps) \n")
+        }
+        didSet {
+            if totalSteps > oldValue {
+                print("Added \(totalSteps - oldValue) steps \n")
+            }
+        }
+    }
+}
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+stepCounter.totalSteps = 360
+stepCounter.totalSteps = 896
+stepCounter.totalSteps = 0
+
+//..类型属性  无法理解,书上可能翻译的有错,需要看下官方的文档 跳过
+struct AnotherStructure {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 0
+    }
+}
+enum AnotherEnumeration {
+    static var storedTypeProperty = "Some value."
+    static var computedTypeProperty: Int {
+        return 0
+    }
+}
+struct TheOtherClass {
+    static var computedTypeProperty: Int {
+        return 0
+    }
+}
+print(TheOtherClass.computedTypeProperty)
+
+//方法
+//..方法是某些特定类型相关联的函数.类,结构体,枚举都可以定义实例方法
+//....实例方法(Instance Methods):实例方法是属于某个特定类,结构体或者美剧类型的实例方法.
+class Counter {
+    var count: Int = 0
+    func incrementBy(amount: Int, numberOfTimes: Int) {
+        
+    }
+}
 
 
