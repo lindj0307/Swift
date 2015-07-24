@@ -57,7 +57,7 @@ print("\n")
 //半闭区间
 let names = ["Anna","Alex","Brian","Joey","Jack","John Snow"]
 let count = names.count
-//使用半闭去见有错误 for i in 0..count {
+//使用半闭区间有错误 for i in 0..count {
 for i in 0...count-1 {
     println("第\(i+1)个人叫\(names[i])")
 }
@@ -444,15 +444,198 @@ struct TheOtherClass {
     }
 }
 print(TheOtherClass.computedTypeProperty)
+print("\n")
 
-//方法
+//方法        方法还没全看明白
 //..方法是某些特定类型相关联的函数.类,结构体,枚举都可以定义实例方法
 //....实例方法(Instance Methods):实例方法是属于某个特定类,结构体或者美剧类型的实例方法.
 class Counter {
     var count: Int = 0
     func incrementBy(amount: Int, numberOfTimes: Int) {
-        
+        count += amount * numberOfTimes
+        print(count)
+        print("\n")
     }
 }
+let counter = Counter()
+counter.incrementBy(5, numberOfTimes: 3)
+print(counter.count)
+
+struct SomePoint {
+    var x = 0.0,y = 0.0
+    mutating func moveByX(deltaX: Double, y deltaY: Double) {
+        x += deltaX
+        y += deltaY
+    }
+}
+var somePoint = SomePoint(x: 1.0, y: 1.0)
+somePoint.moveByX(2.0, y: 3.0)
+print("The point is now at (\(somePoint.x),\(somePoint.y))\n")
+
+//附属脚本 ??不知道干什么用的 跳过
+
+//继承
+//..一个类可以继承(ihherit)另一个类的方法(methods),属性(property)和其它特性. 继承类叫子类(subclass),被继承类叫超类/父类(superclass)
+class Vehicle {
+    var numberOfWheels: Int
+    var maxPassengers: Int
+    func description() -> String {
+        return "\(numberOfWheels) wheels; up to \(maxPassengers) passenters "
+    }
+    
+    //构造函数
+    init() {
+        numberOfWheels = 0
+        maxPassengers = 1
+    }
+}
+//..子类生成(subclassing)
+class Bicycle: Vehicle {
+     override init () {
+        super.init()
+        numberOfWheels = 2
+    }
+}
+let bicycle = Bicycle()
+print("Bicycle: \(bicycle.description())")
+print("\n")
+
+class Tandem: Bicycle {
+    override init() {
+        super.init()
+        maxPassengers = 2
+    }
+}
+let dandem = Tandem()
+print("Tandem: \(dandem.description())")
+print("\n")
+
+//..重写方法
+class Car: Vehicle {
+    var speed: Double = 0.0
+    override init() {
+        super.init()
+        maxPassengers = 5
+        numberOfWheels = 4
+    }
+    
+    override func description() -> String {
+        return super.description() + "; traveling at \(speed) "
+    }
+}
+let car = Car()
+print("Car: \(car.description())")
+print("\n")
+
+//..重写属性
+class SpeedLimitedCar: Car {
+    override var speed: Double {
+        get {
+            return super.speed
+        }
+        set {
+            super.speed = min(newValue,40.0)
+        }
+    }
+}
+
+let speedLimitedCar = SpeedLimitedCar()
+speedLimitedCar.speed = 60.0
+print("SpeedLimitedCar: \(speedLimitedCar.description())")
+print("\n")
+
+//..重写属性观察器(Property Observer)
+class AutomaticCar: Car {
+    var gear = 1
+    override var speed: Double {
+        didSet {
+            gear = Int(speed / 10.0) + 1
+        }
+    }
+    
+    override func description() -> String {
+        return super.description() + "in gear \(gear)"
+    }
+}
+let automaticCar = AutomaticCar()
+automaticCar.speed = 45.0
+print("AutomaticCar: \(automaticCar.description())")
+print("\n")
+
+//..防止重写 @final
+
+//构造过程
+struct Celsius {
+    var temperatureInCelsius: Double = 0.0
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+}
+let boilingPointOfWater = Celsius(fromFahrenheit: 212.0)
+let freezingPointOfWater = Celsius(fromKelvin: 273.15)
+print(boilingPointOfWater.temperatureInCelsius)
+print("\n")
+print(freezingPointOfWater.temperatureInCelsius)
+print("\n")
+print("\n")
+//..默认构造器
+//....Swift将为所有 属性已提供默认值并且自身没有任何构造函数的结构体或基类提供一个默认构造器.默认构造器简单的创建一个所有属性值都设置为默认值的实例.
+
+//内外部参数名,可选属性类型   跳过
+
+//指定构造器 便利构造器  ??????   构造器链     跳过
+
+//反初始化(deinit())
+struct Bank {
+    static var coinsInBank = 10000
+    static func vendCoins(var numberOfCoinsToVend: Int) -> Int {
+        numberOfCoinsToVend = min(numberOfCoinsToVend, coinsInBank)
+        coinsInBank -= numberOfCoinsToVend
+        return numberOfCoinsToVend
+    }
+    static func receiveCoins(coins: Int) {
+        coinsInBank += coins
+    }
+}
+class Player {
+    var coinsInPurse: Int
+    init(coins: Int) {
+        coinsInPurse = Bank.vendCoins(coins)
+    }
+    
+    func winCoins(coins: Int) {
+        coinsInPurse += Bank.vendCoins(coins)
+    }
+    
+    deinit {
+        Bank.receiveCoins(coinsInPurse)
+    }
+}
+var playerOne: Player? = Player(coins: 100)
+print("A new player has joined the game with \(playerOne!.coinsInPurse) coins \n")
+print("There are now \(Bank.coinsInBank) coins left in the bank \n")
+playerOne!.winCoins(2000)
+print("PlayerOne won 2000 coins & now has \(playerOne!.coinsInPurse) coins \n")
+print("There are now \(Bank.coinsInBank) coins left in the bank \n")
+playerOne = nil
+print("PlayerOne has left the game \n")
+print("There are now \(Bank.coinsInBank) coins left in the bank \n")
+print("\n")
+
+//自动引用计数器 自判断链接 跳过
+
+//类型转换  is as
+
+
+
+
+
+
+
+
+
 
 
