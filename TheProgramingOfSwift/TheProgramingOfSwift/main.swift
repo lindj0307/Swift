@@ -628,6 +628,180 @@ print("\n")
 //自动引用计数器 自判断链接 跳过
 
 //类型转换  is as
+class MediaItem {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+class Movie: MediaItem {
+    var director: String
+    init(name: String, director: String) {
+        self.director = director
+        super.init(name: name)
+    }
+}
+class Song: MediaItem {
+    var artist: String
+    init(name: String, artist: String) {
+        self.artist = artist
+        super.init(name: name)
+    }
+}
+let library = [
+    Movie(name: "Casablanca", director: "Michael Curtiz"),
+    Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
+    Movie(name: "Citizen", director: "Orson Welles"),
+    Song(name: "The One And Only", artist: "Chesney Hawkes"),
+    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
+]
+var movieCount = 0
+var songCount = 0
+for item in library {
+    if item is Movie {
+        ++movieCount
+    } else if item is Song {
+        ++songCount
+    }
+}
+print("Media library contains \(movieCount) movies and \(songCount) songs \n")
+//..向下转型 as
+for item in library {
+    if let movie = item as? Movie {
+        print("Movie: '\(movie.name)', dir.\(movie.director)\n")
+    } else if let song = item as? Song {
+        print("Song: '\(song.name)', by.\(song.artist)\n")
+    }
+}
+print("\n")
+
+//Any和AnyObject的
+//..Swift为不确定类型提供了两种特殊类型别名:
+//..AnyObject可以代表任何class类型的实例
+//..Any可以表示除了方法类型(function types)之外的任何类型
+let someObjects: [AnyObject] = [
+    Movie(name:"2001:A Space odyssey",director: "Stanley Kubrick"),
+    Movie(name:"Moon",director: "Duncan Jones"),
+    Movie(name:"Alien",director: "Ridley Scott")
+]
+for object in someObjects {
+    let movie = object as! Movie
+    print("Movie:'\(movie.name)',dir.\(movie.director)\n")
+}
+
+//类型嵌套  扩展 跳过
+
+//协议(接口) protocol  委托 看斯坦福iOS8学习笔记
+//..定义
+protocol SomeProtocol {
+    var musBeSettable: Int { get set }
+    var doesNotNeedToBeSettalbe: Int { get }
+}
+//..用类实现协议时,使用class关键字来表示该属性为类的成员;用结构或枚举实现协议时,则使用static关键字   --这个语法现在好像变了
+protocol AnotherProtocol {
+    static var someTypeProperty: Int { get set }
+}
+
+//泛型
+//..泛型函数
+func swapTwoValues<T>(inout a: T,inout b:T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+var tempA = 3
+var tempB = 107
+swapTwoValues(&tempA,&tempB)
+var tempStrA = "hello"
+var tempStrB = "world"
+swapTwoValues(&tempStrA,&tempStrB)
+print("now tempA:\(tempA),tempB:\(tempB),tempStrA:\(tempStrA),tempStrB:\(tempStrB) \n")
+
+struct Stack<T> {
+    var items = [T]()
+    mutating func push(item: T) {
+        items.append(item)
+    }
+    mutating func pop() -> T {
+        return items.removeLast()
+    }
+}
+var stackOfStrings = Stack<String>()
+stackOfStrings.push("uno")
+stackOfStrings.push("dos")
+stackOfStrings.push("tres")
+stackOfStrings.push("cuatro")
+let fromTheTop = stackOfStrings.pop()
+print(fromTheTop)
+print("\n")
+
+//..类型约束语法
+func someFunction<T: SomeClass,U: SomeProtocol>(someT: T, someU: U) {
+    
+}
+//关联类型  跳过
+
+//高级运算符 位运算符,移位运算
+//..按位取反运算符(~)
+let initialBits: UInt8 = 0b00001111
+let invertedBits = ~initialBits
+print(invertedBits)
+print("\n")
+//..按位与运算符(&)
+let firstSixBits: UInt8 = 0b11111100
+let lastSixBits: UInt8 = 0b00111111
+let middleFourBits = firstSixBits & lastSixBits
+print(middleFourBits)
+print("\n")
+
+//..按位或运算符(|)
+let someBits: UInt8 = 0b11111100
+let moreBits: UInt8 = 0b00111111
+let combineBits = someBits | moreBits
+print(combineBits)
+print("\n")
+
+//..按位异或运算符(^)
+let firstBits: UInt8 = 0b11111100
+let otherBits: UInt8 = 0b00111111
+let outputBits = firstBits ^ otherBits
+print(outputBits)
+print("\n")
+
+//..按位左移/右移运算符(<</>>)
+let shiftBits: UInt8 = 4    //00000100
+shiftBits << 1              //00001000
+shiftBits << 2              //00010000
+shiftBits << 5              //10000000
+shiftBits << 6              //00000000
+shiftBits >> 2              //00000001
+
+//..溢出
+
+//....占坑,准备写几个关于按位运算的函数
+
+//语言附注
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
