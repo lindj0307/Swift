@@ -117,15 +117,12 @@ class ViewController: UIViewController {
         request.region = MKCoordinateRegion(center: initialLocation.coordinate, span: span)
         //启动搜索并返回结果保存在数组中
         let search = MKLocalSearch(request: request)
-        search.startWithCompletionHandler { (response:MKLocalSearchResponse!, error:NSError!) -> Void in
-            for item in response.mapItems as![MKMapItem] {
-                self.addLocation(item.name, latitude: item.placemark.location.coordinate.latitude, longtitude: item.placemark.location.coordinate.longitude)
+        search.startWithCompletionHandler { (response:MKLocalSearchResponse?, error:NSError?) -> Void in
+            for item in response!.mapItems {
+                self.addLocation(item.name!, latitude: item.placemark.location!.coordinate.latitude, longtitude: item.placemark.location!.coordinate.longitude)
             }
         }
     }
-    
-
-
 }
 
 
