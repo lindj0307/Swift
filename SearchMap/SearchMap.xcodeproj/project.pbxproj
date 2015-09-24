@@ -159,6 +159,8 @@
 		048803EC1B57FDB0000449D2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Anta;
 				TargetAttributes = {

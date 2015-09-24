@@ -13,30 +13,30 @@ let http404Error = (404,"Not Found")
 let http200Status = (code: 200,description: "OK")
 let (statusCode,statusMessage) = http404Error
 let (justTheStatusCode,_) = http404Error
-println("The Status code is \(statusCode)")
-println("The Status message is \(statusMessage)")
-println("The Status code is \(justTheStatusCode)")
-println(http404Error.0)
-println(http404Error.1)
-println(http200Status)
+print("The Status code is \(statusCode)")
+print("The Status message is \(statusMessage)")
+print("The Status code is \(justTheStatusCode)")
+print(http404Error.0)
+print(http404Error.1)
+print(http200Status)
 print("\n") 
 
 //Optionals 可选 用来处理可能缺失的情况
 let possibleNumber = "123"
 //这返回的是(Optional)Int,而不是一个Int
-let convertedNumber = possibleNumber.toInt()
+//let convertedNumber = possibleNumber.toInt()
 //这返回的是Int,而不是一个(Optional)Int   forced unwrapping  当加入!的Option为nil时程序会出错.
-let convertedNumberSure = possibleNumber.toInt()!
-println(convertedNumber)
-println(convertedNumberSure)
+//let convertedNumberSure = possibleNumber.toInt()!
+//print(convertedNumber)
+//print(convertedNumberSure)
 print("\n")
 var serverResponseCode: Int? = 404
 //可以给一个Optional赋值为nil
 serverResponseCode = nil
 //默认为nil
 var surveyAnswer: String?
-println(serverResponseCode)
-println(surveyAnswer)
+print(serverResponseCode)
+print(surveyAnswer)
 
 //断言 assertion
 let age = 5
@@ -44,13 +44,13 @@ assert(age>=0, "A person's age cannot be less than zero.")
 print("\n")
 
 //基本运算
-println(9%4)
-println(8%2.5)
+print(9%4)
+print(8%2.5)
 print("\n")
 
 //闭区间
 for index in 1...5 {
-    println("\(index) * 5 = \(index * 5)")
+    print("\(index) * 5 = \(index * 5)")
 }
 print("\n")
 
@@ -59,7 +59,7 @@ let names = ["Anna","Alex","Brian","Joey","Jack","John Snow"]
 let count = names.count
 //使用半闭区间有错误 for i in 0..count {
 for i in 0...count-1 {
-    println("第\(i+1)个人叫\(names[i])")
+    print("第\(i+1)个人叫\(names[i])")
 }
 print("\n")
 
@@ -72,12 +72,12 @@ print("\n")
 //..4.四字节Unicode标量,写成 \xnnnnnnnn,其中nnnnnnnn为八位十六进制数.
 var emptyString = ""
 if emptyString.isEmpty {
-    println("Nothing to see here!")
+    print("Nothing to see here!")
 }
 //使用字符(Characters)
-for character in "You know nothing John Snow!" {
-    println(character)
-}
+//for character in "You know nothing John Snow!" {
+//    println(character)
+//}
 print("\n")
 
 //集合类型
@@ -87,7 +87,7 @@ print("\n")
 //之前是这样写 var shoppingList: String[] = ["Egg","Milk"] 现在这样写会报错
 var shoppingList: [String] = ["Egg","Milk"]
 //var shoppingList = ["Egg","Milk"]
-println(shoppingList)
+print(shoppingList)
 //在数组后面添加新的数据项
 shoppingList.append("Flour")
 shoppingList[0] = "Six eggs"
@@ -95,32 +95,32 @@ shoppingList[0] = "Six eggs"
 shoppingList += ["Wilding John Snow","Fruit"]
 //在第一项添加 Wilding Joey
 shoppingList.insert("Wilding Joey", atIndex: 0)
-println(shoppingList[0])
-println(shoppingList[3...5])
-println(shoppingList)
+print(shoppingList[0])
+print(shoppingList[3...5])
+print(shoppingList)
 shoppingList.removeAtIndex(0)
 let removedItem = shoppingList.removeAtIndex(0)
-println(removedItem)
-println(shoppingList)
+print(removedItem)
+print(shoppingList)
 print("\n")
 //....遍历数组
 for item in shoppingList {
-    println(item)
+    print(item)
 }
 print("\n")
 //使用全局enumerate函数来比那里数组
-for (index,value) in enumerate(shoppingList) {
-    println("Item \(index+1): \(value)")
-}
+//for (index,value) in enumerate(shoppingList) {
+//    print("Item \(index+1): \(value)")
+//}
 //创建并且构造一个数组
 var someInt = [Int]()  //定义可变的空数组,这是目前的语法
 someInt.append(1)
-println(someInt)
+print(someInt)
 //创建一个特定大小的数组
 var threeDoubles = [Double](count: 3,repeatedValue: 0.0)
-println(threeDoubles)
+print(threeDoubles)
 var anotherThreeDoubles = Array(count: 3, repeatedValue: 2.5)
-println(anotherThreeDoubles)
+print(anotherThreeDoubles)
 print("\n")
 
 //..字典:字典是一种存储相同类型多重数据的存储器.
@@ -223,16 +223,16 @@ print(sayHello("John Snow"))
 //..多返回值函数
 func count(str: String) -> (vowels: Int, consonants: Int, others: Int) {
     var vowels = 0,consonants = 0, others = 0
-    for character in str {
-        switch String(character).lowercaseString {
-            case "a","e","i","o","u":
-            ++vowels
-            case "b","c","d","f","g","h","j","k","l","m","n","q","r","s","t","v","w","x","y","z":
-            ++consonants
-            default:
-            ++others
-        }
-    }
+//    for character in str {
+//        switch String(character).lowercaseString {
+//            case "a","e","i","o","u":
+//            ++vowels
+//            case "b","c","d","f","g","h","j","k","l","m","n","q","r","s","t","v","w","x","y","z":
+//            ++consonants
+//            default:
+//            ++others
+//        }
+//    }
     return (vowels,consonants,others)
 }
 
@@ -243,7 +243,7 @@ print("\(total.vowels) vowels and \(total.consonants) consonants and \(total.oth
 func join(s1: String, s2: String, joiner: String) -> String {
     return s1 + joiner + s2 + "\n"
 }
-print(join("Hello","Joey",","))
+print(join("Hello",s2: "Joey",joiner: ","))
 
 //..带外部参数并且提供默认值
 func anotherJoin(string s1: String, toString s2: String, withJoiner joiner: String = " ") -> String {
@@ -252,15 +252,15 @@ func anotherJoin(string s1: String, toString s2: String, withJoiner joiner: Stri
 print(anotherJoin(string: "Hello", toString: "John", withJoiner: ","))
 print(anotherJoin(string: "Hello", toString: "John"))
 
-func containCharacter(#string: String, #characterToFind: Character) -> Bool {
-    for character in string {
-        if character == characterToFind {
-            return true
-        }
-    }
+func containCharacter(string: String, characterToFind: Character) -> Bool {
+//    for character in string {
+//        if character == characterToFind {
+//            return true
+//        }
+//    }
     return false
 }
-let containV = containCharacter(string: "sfsdfdsf", characterToFind: "v")
+let containV = containCharacter("sfsdfdsf", characterToFind: "v")
 print(containV)
 print("\n")
 
@@ -276,7 +276,7 @@ print(arithmeticMean(1,2,3,4,5,6,7).description)
 print("\n")
 
 //..In-Out参数  inout 类似C#ref,out关键字
-func swapTwoInts (inout #a: Int, inout #b: Int) {
+func swapTwoInts (inout a: Int, inout b: Int) {
     let temp = a
     a = b
     b = temp
@@ -284,7 +284,7 @@ func swapTwoInts (inout #a: Int, inout #b: Int) {
 
 var firstInt = 3
 var secondInt = 17
-swapTwoInts(a: &firstInt, b: &secondInt)
+swapTwoInts(&firstInt, b: &secondInt)
 print("firstInt is now \(firstInt), and SecondInt is now \(secondInt)\n")
 print("\n")
 
@@ -305,7 +305,7 @@ print("Result: \(mathFunction(2,3))\n")
 func printMathResult(mathFunction: (Int, Int) -> Int, a: Int, b: Int){
     print("Result: \(mathFunction(a,b))\n")
 }
-printMathResult(addTwoInts, 3, 5)
+printMathResult(addTwoInts, a: 3, b: 5)
 
 //..函数返回函数类型  嵌套函数 可读性差 实际应用中应该比较少用  跳过
 
@@ -711,10 +711,10 @@ func swapTwoValues<T>(inout a: T,inout b:T) {
 }
 var tempA = 3
 var tempB = 107
-swapTwoValues(&tempA,&tempB)
+swapTwoValues(&tempA,b: &tempB)
 var tempStrA = "hello"
 var tempStrB = "world"
-swapTwoValues(&tempStrA,&tempStrB)
+swapTwoValues(&tempStrA,b: &tempStrB)
 print("now tempA:\(tempA),tempB:\(tempB),tempStrA:\(tempStrA),tempStrB:\(tempStrB) \n")
 
 struct Stack<T> {

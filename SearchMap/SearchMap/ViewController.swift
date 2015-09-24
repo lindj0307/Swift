@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             self.btnMenu.transform = CGAffineTransformMakeRotation(0.25 * 3.1415927)
         }, completion: nil)
         //创建一个区域,以initialLocation为中心,半径4公里的范围的矩形区域
-        var region = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate, searchRadius, searchRadius)
+        let region = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate, searchRadius, searchRadius)
         //设置显示
         mapView.setRegion(region, animated: true)
         
