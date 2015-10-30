@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TestWorkspace/TestWorkspace.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:TheProgramingOfSwift/TheProgramingOfSwift.xcodeproj">
    </FileRef>
    <FileRef
