@@ -285,6 +285,7 @@
 				D41ADA281BE7044300A15358 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
