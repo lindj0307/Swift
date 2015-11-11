@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D41ADA181BE7044300A15358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41ADA171BE7044300A15358 /* AppDelegate.swift */; };
-		D41ADA1D1BE7044300A15358 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41ADA1B1BE7044300A15358 /* Main.storyboard */; };
-		D41ADA1F1BE7044300A15358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41ADA1E1BE7044300A15358 /* Assets.xcassets */; };
-		D41ADA221BE7044300A15358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41ADA201BE7044300A15358 /* LaunchScreen.storyboard */; };
+		D44B12C71BF3220C008A48C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B12C61BF3220C008A48C3 /* AppDelegate.swift */; };
+		D44B12C91BF3220C008A48C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B12C81BF3220C008A48C3 /* ViewController.swift */; };
+		D44B12CC1BF3220C008A48C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CA1BF3220C008A48C3 /* Main.storyboard */; };
+		D44B12CE1BF3220C008A48C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CD1BF3220C008A48C3 /* Assets.xcassets */; };
+		D44B12D11BF3220C008A48C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D41ADA141BE7044300A15358 /* MJRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MJRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D41ADA171BE7044300A15358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D41ADA1C1BE7044300A15358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D41ADA1E1BE7044300A15358 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D41ADA211BE7044300A15358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D41ADA231BE7044300A15358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D44B12C31BF3220C008A48C3 /* HealthKitTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44B12C61BF3220C008A48C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D44B12C81BF3220C008A48C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D44B12CB1BF3220C008A48C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D44B12CD1BF3220C008A48C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D44B12D01BF3220C008A48C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D44B12D21BF3220C008A48C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D41ADA111BE7044300A15358 /* Frameworks */ = {
+		D44B12C01BF3220C008A48C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,69 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D41ADA0B1BE7044300A15358 = {
+		D44B12BA1BF3220C008A48C3 = {
 			isa = PBXGroup;
 			children = (
-				D41ADA161BE7044300A15358 /* MJRefresh */,
-				D41ADA151BE7044300A15358 /* Products */,
+				D44B12C51BF3220C008A48C3 /* HealthKitTutorial */,
+				D44B12C41BF3220C008A48C3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D41ADA151BE7044300A15358 /* Products */ = {
+		D44B12C41BF3220C008A48C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D41ADA141BE7044300A15358 /* MJRefresh.app */,
+				D44B12C31BF3220C008A48C3 /* HealthKitTutorial.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D41ADA161BE7044300A15358 /* MJRefresh */ = {
+		D44B12C51BF3220C008A48C3 /* HealthKitTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				D41ADA171BE7044300A15358 /* AppDelegate.swift */,
-				D41ADA1B1BE7044300A15358 /* Main.storyboard */,
-				D41ADA1E1BE7044300A15358 /* Assets.xcassets */,
-				D41ADA201BE7044300A15358 /* LaunchScreen.storyboard */,
-				D41ADA231BE7044300A15358 /* Info.plist */,
+				D44B12C61BF3220C008A48C3 /* AppDelegate.swift */,
+				D44B12C81BF3220C008A48C3 /* ViewController.swift */,
+				D44B12CA1BF3220C008A48C3 /* Main.storyboard */,
+				D44B12CD1BF3220C008A48C3 /* Assets.xcassets */,
+				D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */,
+				D44B12D21BF3220C008A48C3 /* Info.plist */,
 			);
-			path = MJRefresh;
+			path = HealthKitTutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D41ADA131BE7044300A15358 /* MJRefresh */ = {
+		D44B12C21BF3220C008A48C3 /* HealthKitTutorial */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D41ADA261BE7044300A15358 /* Build configuration list for PBXNativeTarget "MJRefresh" */;
+			buildConfigurationList = D44B12D51BF3220C008A48C3 /* Build configuration list for PBXNativeTarget "HealthKitTutorial" */;
 			buildPhases = (
-				D41ADA101BE7044300A15358 /* Sources */,
-				D41ADA111BE7044300A15358 /* Frameworks */,
-				D41ADA121BE7044300A15358 /* Resources */,
+				D44B12BF1BF3220C008A48C3 /* Sources */,
+				D44B12C01BF3220C008A48C3 /* Frameworks */,
+				D44B12C11BF3220C008A48C3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MJRefresh;
-			productName = MJRefresh;
-			productReference = D41ADA141BE7044300A15358 /* MJRefresh.app */;
+			name = HealthKitTutorial;
+			productName = HealthKitTutorial;
+			productReference = D44B12C31BF3220C008A48C3 /* HealthKitTutorial.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41ADA0C1BE7044300A15358 /* Project object */ = {
+		D44B12BB1BF3220C008A48C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Anta;
 				TargetAttributes = {
-					D41ADA131BE7044300A15358 = {
-						CreatedOnToolsVersion = 7.0.1;
+					D44B12C21BF3220C008A48C3 = {
+						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
-			buildConfigurationList = D41ADA0F1BE7044300A15358 /* Build configuration list for PBXProject "MJRefresh" */;
+			buildConfigurationList = D44B12BE1BF3220C008A48C3 /* Build configuration list for PBXProject "HealthKitTutorial" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -103,53 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = D41ADA0B1BE7044300A15358;
-			productRefGroup = D41ADA151BE7044300A15358 /* Products */;
+			mainGroup = D44B12BA1BF3220C008A48C3;
+			productRefGroup = D44B12C41BF3220C008A48C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D41ADA131BE7044300A15358 /* MJRefresh */,
+				D44B12C21BF3220C008A48C3 /* HealthKitTutorial */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D41ADA121BE7044300A15358 /* Resources */ = {
+		D44B12C11BF3220C008A48C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41ADA221BE7044300A15358 /* LaunchScreen.storyboard in Resources */,
-				D41ADA1F1BE7044300A15358 /* Assets.xcassets in Resources */,
-				D41ADA1D1BE7044300A15358 /* Main.storyboard in Resources */,
+				D44B12D11BF3220C008A48C3 /* LaunchScreen.storyboard in Resources */,
+				D44B12CE1BF3220C008A48C3 /* Assets.xcassets in Resources */,
+				D44B12CC1BF3220C008A48C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D41ADA101BE7044300A15358 /* Sources */ = {
+		D44B12BF1BF3220C008A48C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41ADA181BE7044300A15358 /* AppDelegate.swift in Sources */,
+				D44B12C91BF3220C008A48C3 /* ViewController.swift in Sources */,
+				D44B12C71BF3220C008A48C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D41ADA1B1BE7044300A15358 /* Main.storyboard */ = {
+		D44B12CA1BF3220C008A48C3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D41ADA1C1BE7044300A15358 /* Base */,
+				D44B12CB1BF3220C008A48C3 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D41ADA201BE7044300A15358 /* LaunchScreen.storyboard */ = {
+		D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D41ADA211BE7044300A15358 /* Base */,
+				D44B12D01BF3220C008A48C3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -157,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D41ADA241BE7044300A15358 /* Debug */ = {
+		D44B12D31BF3220C008A48C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -193,16 +198,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D41ADA251BE7044300A15358 /* Release */ = {
+		D44B12D41BF3220C008A48C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,32 +236,31 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		D41ADA271BE7044300A15358 /* Debug */ = {
+		D44B12D61BF3220C008A48C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MJRefresh/Info.plist;
+				INFOPLIST_FILE = HealthKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Anta.Joey.MJRefresh;
+				PRODUCT_BUNDLE_IDENTIFIER = Anta.Joey.HealthKitTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		D41ADA281BE7044300A15358 /* Release */ = {
+		D44B12D71BF3220C008A48C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MJRefresh/Info.plist;
+				INFOPLIST_FILE = HealthKitTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Anta.Joey.MJRefresh;
+				PRODUCT_BUNDLE_IDENTIFIER = Anta.Joey.HealthKitTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -265,25 +268,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D41ADA0F1BE7044300A15358 /* Build configuration list for PBXProject "MJRefresh" */ = {
+		D44B12BE1BF3220C008A48C3 /* Build configuration list for PBXProject "HealthKitTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D41ADA241BE7044300A15358 /* Debug */,
-				D41ADA251BE7044300A15358 /* Release */,
+				D44B12D31BF3220C008A48C3 /* Debug */,
+				D44B12D41BF3220C008A48C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D41ADA261BE7044300A15358 /* Build configuration list for PBXNativeTarget "MJRefresh" */ = {
+		D44B12D51BF3220C008A48C3 /* Build configuration list for PBXNativeTarget "HealthKitTutorial" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D41ADA271BE7044300A15358 /* Debug */,
-				D41ADA281BE7044300A15358 /* Release */,
+				D44B12D61BF3220C008A48C3 /* Debug */,
+				D44B12D71BF3220C008A48C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41ADA0C1BE7044300A15358 /* Project object */;
+	rootObject = D44B12BB1BF3220C008A48C3 /* Project object */;
 }
