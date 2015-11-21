@@ -7,15 +7,59 @@
 //
 
 import UIKit
+import HealthKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    //MARK: - Variable
+    var tabBarController: UITabBarController?
     var window: UIWindow?
+    /// 定义全局HealthStore变量
+    let healthStore: HKHealthStore = HKHealthStore()
+    
+    
+    //MARK: - Life Cycle
+    
+    //MARK: - TableView Delegate
+    
+    //MARK: - Custom Delegate
+    
+    //MARK: - TableView Datasource
+    
+    //MARK: - Event Response
+    
+    //MARK: - Private Methods
+    
+    //MARK: - Getters/Setters
+    
+    
 
+    func application(application: UIApplication, willFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        return true
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let profile: ProfileViewController = ProfileViewController(style: UITableViewStyle.Plain)
+        profile.healthStore = self.healthStore
+        
+        let profileNavigation: UINavigationController = UINavigationController(rootViewController: profile)
+        profileNavigation.tabBarItem.image = UIImage(named: "profile")
+        profileNavigation.title = "Profile"
+        
+        self.tabBarController = UITabBarController()
+        
+        
+        self.tabBarController!.viewControllers = [profileNavigation]
+        
+        let  screen: CGRect = UIScreen.mainScreen().bounds
+        
+        self.window = UIWindow(frame: screen)
+        self.window!.backgroundColor = UIColor.blackColor()
+        self.window!.rootViewController = tabBarController
+        self.window!.makeKeyAndVisible()
+        
         return true
     }
 

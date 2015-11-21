@@ -8,31 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D44B12C71BF3220C008A48C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B12C61BF3220C008A48C3 /* AppDelegate.swift */; };
-		D44B12CC1BF3220C008A48C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CA1BF3220C008A48C3 /* Main.storyboard */; };
 		D44B12CE1BF3220C008A48C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CD1BF3220C008A48C3 /* Assets.xcassets */; };
 		D44B12D11BF3220C008A48C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */; };
-		D44B12DB1BF324BC008A48C3 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B12DA1BF324BC008A48C3 /* MasterTableViewController.swift */; };
 		D44B12DD1BF34700008A48C3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44B12DC1BF34700008A48C3 /* HealthKit.framework */; };
-		D44B12E01BF41A0E008A48C3 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B12DF1BF41A0E008A48C3 /* HealthManager.swift */; };
-		D44B12E41BF425FA008A48C3 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B12E31BF425FA008A48C3 /* ProfileTableViewController.swift */; };
-		D488C5E31BF444D70057693A /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488C5E11BF444D70057693A /* DatePickerCell.swift */; };
-		D488C5E41BF444D70057693A /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D488C5E21BF444D70057693A /* NumberCell.swift */; };
+		D4F3C4F31BFC1E0F001DE7DD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C4F21BFC1E0F001DE7DD /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D44B12C31BF3220C008A48C3 /* HealthKitTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44B12C61BF3220C008A48C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D44B12CB1BF3220C008A48C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D44B12CD1BF3220C008A48C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D44B12D01BF3220C008A48C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D44B12D21BF3220C008A48C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D44B12DA1BF324BC008A48C3 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		D44B12DC1BF34700008A48C3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		D44B12DE1BF34700008A48C3 /* HealthKitTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HealthKitTutorial.entitlements; sourceTree = "<group>"; };
-		D44B12DF1BF41A0E008A48C3 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
-		D44B12E31BF425FA008A48C3 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		D488C5E11BF444D70057693A /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
-		D488C5E21BF444D70057693A /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		D4F3C4F21BFC1E0F001DE7DD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,34 +58,13 @@
 			isa = PBXGroup;
 			children = (
 				D44B12DE1BF34700008A48C3 /* HealthKitTutorial.entitlements */,
-				D44B12D91BF32469008A48C3 /* Cells */,
-				D44B12D81BF3245A008A48C3 /* View Controllers */,
-				D44B12DF1BF41A0E008A48C3 /* HealthManager.swift */,
 				D44B12C61BF3220C008A48C3 /* AppDelegate.swift */,
-				D44B12CA1BF3220C008A48C3 /* Main.storyboard */,
 				D44B12CD1BF3220C008A48C3 /* Assets.xcassets */,
 				D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */,
 				D44B12D21BF3220C008A48C3 /* Info.plist */,
+				D4F3C4F21BFC1E0F001DE7DD /* ProfileViewController.swift */,
 			);
 			path = HealthKitTutorial;
-			sourceTree = "<group>";
-		};
-		D44B12D81BF3245A008A48C3 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D44B12DA1BF324BC008A48C3 /* MasterTableViewController.swift */,
-				D44B12E31BF425FA008A48C3 /* ProfileTableViewController.swift */,
-			);
-			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		D44B12D91BF32469008A48C3 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D488C5E11BF444D70057693A /* DatePickerCell.swift */,
-				D488C5E21BF444D70057693A /* NumberCell.swift */,
-			);
-			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +133,6 @@
 			files = (
 				D44B12D11BF3220C008A48C3 /* LaunchScreen.storyboard in Resources */,
 				D44B12CE1BF3220C008A48C3 /* Assets.xcassets in Resources */,
-				D44B12CC1BF3220C008A48C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,26 +143,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D44B12DB1BF324BC008A48C3 /* MasterTableViewController.swift in Sources */,
-				D44B12E41BF425FA008A48C3 /* ProfileTableViewController.swift in Sources */,
-				D488C5E41BF444D70057693A /* NumberCell.swift in Sources */,
-				D44B12E01BF41A0E008A48C3 /* HealthManager.swift in Sources */,
+				D4F3C4F31BFC1E0F001DE7DD /* ProfileViewController.swift in Sources */,
 				D44B12C71BF3220C008A48C3 /* AppDelegate.swift in Sources */,
-				D488C5E31BF444D70057693A /* DatePickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D44B12CA1BF3220C008A48C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D44B12CB1BF3220C008A48C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
