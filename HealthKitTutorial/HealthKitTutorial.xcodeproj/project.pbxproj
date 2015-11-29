@@ -11,6 +11,7 @@
 		D44B12CE1BF3220C008A48C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CD1BF3220C008A48C3 /* Assets.xcassets */; };
 		D44B12D11BF3220C008A48C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */; };
 		D44B12DD1BF34700008A48C3 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44B12DC1BF34700008A48C3 /* HealthKit.framework */; };
+		D44D38131C06F48C007B8BBD /* HKHealthStoreExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44D38121C06F48C007B8BBD /* HKHealthStoreExtension.swift */; };
 		D4F3C4F31BFC1E0F001DE7DD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F3C4F21BFC1E0F001DE7DD /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		D44B12D21BF3220C008A48C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D44B12DC1BF34700008A48C3 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		D44B12DE1BF34700008A48C3 /* HealthKitTutorial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HealthKitTutorial.entitlements; sourceTree = "<group>"; };
+		D44D38121C06F48C007B8BBD /* HKHealthStoreExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKHealthStoreExtension.swift; sourceTree = "<group>"; };
 		D4F3C4F21BFC1E0F001DE7DD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 				D44B12CF1BF3220C008A48C3 /* LaunchScreen.storyboard */,
 				D44B12D21BF3220C008A48C3 /* Info.plist */,
 				D4F3C4F21BFC1E0F001DE7DD /* ProfileViewController.swift */,
+				D44D38121C06F48C007B8BBD /* HKHealthStoreExtension.swift */,
 			);
 			path = HealthKitTutorial;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44D38131C06F48C007B8BBD /* HKHealthStoreExtension.swift in Sources */,
 				D4F3C4F31BFC1E0F001DE7DD /* ProfileViewController.swift in Sources */,
 				D44B12C71BF3220C008A48C3 /* AppDelegate.swift in Sources */,
 			);

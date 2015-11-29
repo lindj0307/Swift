@@ -69,8 +69,8 @@ class ProfileViewController: UITableViewController {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 // Update the user interface based on the current user's health information.
                 self.updateUsersAge()
-                self.updateUsersHeight()
-                self.updateUsersWeight()
+                //self.updateUsersHeight()
+                //self.updateUsersWeight()
                 self.updateUsersStepCount()
             })
         }
@@ -213,15 +213,152 @@ class ProfileViewController: UITableViewController {
     }
     
     private func updateUsersHeight() -> Void {
+        let setHeightInformationHandle: ((String) -> Void) = {
+            (heightValue) -> Void in
+            // Fetch user's default height unit in cm. 
+            let lengthFormatter: NSLengthFormatter = NSLengthFormatter()
+            lengthFormatter.unitStyle = NSFormattingUnitStyle.Long
+            
+            let heightFormatterUnit: NSLengthFormatterUnit = .Inch
+            let heightUnitString: String = lengthFormatter.unitStringFromValue(10, unit: heightFormatterUnit)
+            let localizedHeightUnitDescriptionFormat: String = NSLocalizedString("身高 (%@)", comment: "")
+            let heightUnitDescription: NSString = NSString(format: localizedHeightUnitDescriptionFormat, heightUnitString)
+            
+            if var userProfiles = self.userProfiles {
+                var height: [String] = userProfiles[ProfileKeys.Height] as [String]!
+                height[self.kProfileUnit] = heightUnitDescription as String
+                height[self.kProfileDetail] = heightValue as String
+                
+                userProfiles[ProfileKeys.Height] = height
+                self.userProfiles = userProfiles
+            }
+            
+            // Reload table View (only height row)
+            let indexPath: NSIndexPath = NSIndexPath(forRow: ProfileViewControllerTableViewIndex.Height.rawValue, inSection: 0)
+            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        }
+        
+        let heightType: HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierHeight)!
+        
+        // Query to get the user's latest height, if it exists. 
+        let completion: HKCompletionHandle = {
+            (mostRecentQuantity, error) -> Void in
+            
+            if mostRecentQuantity == nil {
+                print("获取身高发生异常。。。")
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    let heightValue: String = NSLocalizedString("没有有效数值", comment: "")
+                    
+                    setHeightInformationHandle(heightValue)
+                })
+                return
+            }
+            // Determine the height in the required unit. 
+            let heightUnit: HKUnit = HKUnit.inchUnit()
+            let userHeight: Double = mostRecentQuantity.doubleValueForUnit(heightUnit)
+            
+            // Update the user interface
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let heightValue: String = NSNumberFormatter.localizedStringFromNumber(NSNumber(double: userHeight), numberStyle: NSNumberFormatterStyle.NoStyle)
+                setHeightInformationHandle(heightValue)
+            })
+        }
+        self.healthStore!.mostRecentQuantitySampleOfType(heightType, predicate: nil, completion: completion)
         
     }
     
     private func updateUsersWeight() -> Void {
+        let setWeightInformationHandle: ((String) -> Void) = {
+            (weightValue) -> Void in
+            
+            let massFormatter: NSMassFormatter = NSMassFormatter()
+            massFormatter.unitStyle = NSFormattingUnitStyle.Long
+            
+            let weightFormatterUnit: NSMassFormatterUnit = .Pound
+            let weightUnitString: String = massFormatter.unitStringFromValue(10, unit: weightFormatterUnit)
+            
+            let localizedWeightUnitDescriptionFormat: String = NSLocalizedString("体重 (%@)", comment: "")
+            
+            let weightUnitDescription: NSString = NSString(format: localizedWeightUnitDescriptionFormat, weightUnitString)
+            
+            
+            if var userProfiles = self.userProfiles {
+                var height: [String] = userProfiles[ProfileKeys.Weight] as [String]!
+                height[self.kProfileUnit] = weightUnitDescription as String
+                height[self.kProfileDetail] = weightValue as String
+                
+                userProfiles[ProfileKeys.Weight] = height
+                self.userProfiles = userProfiles
+            }
+            
+            // Reload table View (only height row)
+            let indexPath: NSIndexPath = NSIndexPath(forRow: ProfileViewControllerTableViewIndex.Weight.rawValue, inSection: 0)
+            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        }
         
+        let weightType : HKQuantityType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierBodyMass)!
+        
+        let completion: HKCompletionHandle = {
+            (mostRecentQuantity, error ) -> Void in
+            
+            if mostRecentQuantity == nil {
+                print("获取体重发生异常")
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    let weightValue: String = NSLocalizedString("无效数值", comment: "")
+                    
+                    setWeightInformationHandle(weightValue)
+                })
+                return
+            }
+            
+            let weightUnit: HKUnit = HKUnit.poundUnit()
+            let userWeight: Double = mostRecentQuantity.doubleValueForUnit(weightUnit)
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                let weightValue: String = NSNumberFormatter.localizedStringFromNumber(NSNumber(double: userWeight), numberStyle: NSNumberFormatterStyle.NoStyle)
+                
+                setWeightInformationHandle(weightValue)
+            })
+        }
+        
+        self.healthStore!.mostRecentQuantitySampleOfType(weightType, predicate: nil , completion: completion)
+    }
+    
+    func readStepsWorksout(limit :Int,completion: (([AnyObject]!, NSError!) -> Void)!) {
+        //1
+        let sampleType = HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+        let sortDescriptor = NSSortDescriptor(key:HKSampleSortIdentifierStartDate, ascending: false)
+        let predicate = HKQuery.predicateForObjectsFromSource(HKSource.defaultSource())
+        //2
+        let sampleQuery = HKSampleQuery(sampleType: sampleType!, predicate: predicate, limit: limit,sortDescriptors: [sortDescriptor])
+            { (sampleQuery, results, error ) -> Void in
+                if let queryError = error {
+                    print( "There was an error while reading the samples: \(queryError.localizedDescription)")
+                }
+                completion(results,error)
+        }
+        self.healthStore!.executeQuery(sampleQuery)
     }
     
     private func updateUsersStepCount() -> Void {
-        
+        readStepsWorksout(0, completion: { (results, error) -> Void in
+            if( error != nil ) {
+                print(error.localizedDescription)
+                return;
+            }
+            
+            //Kkeep workouts and refresh tableview in main thread
+            let stepsOut = results as! [HKQuantitySample]
+            for walk in stepsOut {
+                print("\(walk)")
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                print("\(stepsOut)")
+            })
+        })
     }
     
     private func saveHeightIntoHealthStore(height: Double) -> Void {
