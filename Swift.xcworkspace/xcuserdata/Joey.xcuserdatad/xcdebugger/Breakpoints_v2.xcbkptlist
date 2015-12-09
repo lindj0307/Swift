@@ -241,38 +241,6 @@
             endingLineNumber = "250"
             landmarkName = "updateUsersHeight()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HealthKitTutorial.ProfileViewController.((updateUsersHeight in _C124EAC5967F089B8E34CE8EC1F023AC) (HealthKitTutorial.ProfileViewController) -&gt; () -&gt; ()).(closure #2)"
-                  moduleName = "HealthKitTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Joey/Documents/Work/GitHub/Swift/HealthKitTutorial/HealthKitTutorial/ProfileViewController.swift"
-                  timestampString = "470279194.233175"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "250"
-                  endingLineNumber = "250"
-                  offsetFromSymbolStart = "316">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HealthKitTutorial.ProfileViewController.((updateUsersHeight in _C124EAC5967F089B8E34CE8EC1F023AC) (HealthKitTutorial.ProfileViewController) -&gt; () -&gt; ()).(closure #2).(closure #1)"
-                  moduleName = "HealthKitTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Joey/Documents/Work/GitHub/Swift/HealthKitTutorial/HealthKitTutorial/ProfileViewController.swift"
-                  timestampString = "470279194.233648"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "251"
-                  endingLineNumber = "251"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -337,38 +305,6 @@
             endingLineNumber = "346"
             landmarkName = "updateUsersStepCount()"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HealthKitTutorial.ProfileViewController.(updateUsersStepCount in _C124EAC5967F089B8E34CE8EC1F023AC) (HealthKitTutorial.ProfileViewController)() -&gt; ()"
-                  moduleName = "HealthKitTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Joey/Documents/Work/GitHub/Swift/HealthKitTutorial/HealthKitTutorial/ProfileViewController.swift"
-                  timestampString = "470279194.240424"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "346"
-                  endingLineNumber = "346"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HealthKitTutorial.ProfileViewController.((updateUsersStepCount in _C124EAC5967F089B8E34CE8EC1F023AC) (HealthKitTutorial.ProfileViewController) -&gt; () -&gt; ()).(closure #1)"
-                  moduleName = "HealthKitTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Joey/Documents/Work/GitHub/Swift/HealthKitTutorial/HealthKitTutorial/ProfileViewController.swift"
-                  timestampString = "470279194.240815"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "347"
-                  endingLineNumber = "347"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

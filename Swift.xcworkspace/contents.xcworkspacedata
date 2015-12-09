@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Learn the Essentials of Swift.playground">
+   </FileRef>
+   <FileRef
       location = "group:HealthKitTutorial/HealthKitTutorial.xcodeproj">
    </FileRef>
    <FileRef
