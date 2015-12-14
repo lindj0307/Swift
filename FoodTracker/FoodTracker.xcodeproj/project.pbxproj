@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D46F69901C1EF68300D2DCFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F698F1C1EF68300D2DCFD /* AppDelegate.swift */; };
-		D46F69921C1EF68300D2DCFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F69911C1EF68300D2DCFD /* ViewController.swift */; };
 		D46F69951C1EF68300D2DCFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46F69931C1EF68300D2DCFD /* Main.storyboard */; };
 		D46F69971C1EF68300D2DCFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46F69961C1EF68300D2DCFD /* Assets.xcassets */; };
 		D46F699A1C1EF68300D2DCFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46F69981C1EF68300D2DCFD /* LaunchScreen.storyboard */; };
 		D46F69A51C1EF68300D2DCFD /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F69A41C1EF68300D2DCFD /* FoodTrackerTests.swift */; };
+		D46F69B21C1F0F9500D2DCFD /* FoodTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F69B11C1F0F9500D2DCFD /* FoodTrackerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		D46F698C1C1EF68300D2DCFD /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46F698F1C1EF68300D2DCFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D46F69911C1EF68300D2DCFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D46F69941C1EF68300D2DCFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D46F69961C1EF68300D2DCFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D46F69991C1EF68300D2DCFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		D46F69A01C1EF68300D2DCFD /* FoodTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46F69A41C1EF68300D2DCFD /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		D46F69A61C1EF68300D2DCFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46F69B11C1F0F9500D2DCFD /* FoodTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTrackerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				D46F698F1C1EF68300D2DCFD /* AppDelegate.swift */,
-				D46F69911C1EF68300D2DCFD /* ViewController.swift */,
 				D46F69931C1EF68300D2DCFD /* Main.storyboard */,
 				D46F69961C1EF68300D2DCFD /* Assets.xcassets */,
 				D46F69981C1EF68300D2DCFD /* LaunchScreen.storyboard */,
 				D46F699B1C1EF68300D2DCFD /* Info.plist */,
+				D46F69B11C1F0F9500D2DCFD /* FoodTrackerViewController.swift */,
 			);
 			path = FoodTracker;
 			sourceTree = "<group>";
@@ -196,8 +196,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D46F69921C1EF68300D2DCFD /* ViewController.swift in Sources */,
 				D46F69901C1EF68300D2DCFD /* AppDelegate.swift in Sources */,
+				D46F69B21C1F0F9500D2DCFD /* FoodTrackerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
