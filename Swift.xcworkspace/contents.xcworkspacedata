@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FoodTracker/FoodTracker.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Learn the Essentials of Swift.playground">
    </FileRef>
    <FileRef
