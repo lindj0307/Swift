@@ -8,17 +8,30 @@
 
 import UIKit
 
-class FoodTrackerViewController: UIViewController,UITextFieldDelegate {
+class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     
     //MARK: - Properties
     
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     //MARK: - Life Cycle
     
     //MARK: - TableView Delegate
+    
+    //MARK: - UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true , completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        photoImageView.image = selectImage
+        dismissViewControllerAnimated(true , completion: nil )
+    }
     
     //MARK: - Custom Delegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -31,6 +44,7 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate {
         mealNameLabel.text = textField.text
     }
     
+    
     //func
     //MARK: - TableView Datasource
     
@@ -38,6 +52,15 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate {
     
     //MARK: - Private Methods
     
+    @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
+        // Hide the keyboard. 
+        nameTextField.resignFirstResponder()
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = .PhotoLibrary
+        imagePickerController.delegate = self
+        presentViewController(imagePickerController, animated: true , completion: nil)
+        
+    }
 
     @IBAction func setDefaultLabelText(sender: UIButton) {
         mealNameLabel.text = "Default Text"

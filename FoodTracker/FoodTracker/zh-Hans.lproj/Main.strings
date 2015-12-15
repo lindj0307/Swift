@@ -1,0 +1,9 @@
+
+/* Class = "UITextField"; placeholder = "Enter meal name"; ObjectID = "8XU-af-tf7"; */
+"8XU-af-tf7.placeholder" = "Enter meal name";
+
+/* Class = "UIButton"; normalTitle = "Set Default Label Text"; ObjectID = "ckA-Ed-LGN"; */
+"ckA-Ed-LGN.normalTitle" = "Set Default Label Text";
+
+/* Class = "UILabel"; text = "Meal Name"; ObjectID = "ieh-4G-GAO"; */
+"ieh-4G-GAO.text" = "Meal Name";

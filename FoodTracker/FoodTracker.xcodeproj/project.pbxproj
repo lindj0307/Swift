@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D415C6681C1FFB780011D3DD /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415C6671C1FFB780011D3DD /* RatingControl.swift */; };
 		D46F69901C1EF68300D2DCFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46F698F1C1EF68300D2DCFD /* AppDelegate.swift */; };
 		D46F69951C1EF68300D2DCFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46F69931C1EF68300D2DCFD /* Main.storyboard */; };
 		D46F69971C1EF68300D2DCFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46F69961C1EF68300D2DCFD /* Assets.xcassets */; };
@@ -26,6 +27,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D415C6671C1FFB780011D3DD /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		D415C6691C2003420011D3DD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		D415C66A1C2003420011D3DD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D46F698C1C1EF68300D2DCFD /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46F698F1C1EF68300D2DCFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D46F69941C1EF68300D2DCFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,11 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				D46F698F1C1EF68300D2DCFD /* AppDelegate.swift */,
+				D46F69B11C1F0F9500D2DCFD /* FoodTrackerViewController.swift */,
+				D415C6671C1FFB780011D3DD /* RatingControl.swift */,
 				D46F69931C1EF68300D2DCFD /* Main.storyboard */,
 				D46F69961C1EF68300D2DCFD /* Assets.xcassets */,
 				D46F69981C1EF68300D2DCFD /* LaunchScreen.storyboard */,
 				D46F699B1C1EF68300D2DCFD /* Info.plist */,
-				D46F69B11C1F0F9500D2DCFD /* FoodTrackerViewController.swift */,
 			);
 			path = FoodTracker;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D46F69901C1EF68300D2DCFD /* AppDelegate.swift in Sources */,
+				D415C6681C1FFB780011D3DD /* RatingControl.swift in Sources */,
 				D46F69B21C1F0F9500D2DCFD /* FoodTrackerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +230,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D46F69941C1EF68300D2DCFD /* Base */,
+				D415C6691C2003420011D3DD /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D46F69991C1EF68300D2DCFD /* Base */,
+				D415C66A1C2003420011D3DD /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -327,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FoodTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,6 +397,7 @@
 				D46F69AB1C1EF68300D2DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D46F69AC1C1EF68300D2DCFD /* Build configuration list for PBXNativeTarget "FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +406,7 @@
 				D46F69AE1C1EF68300D2DCFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
