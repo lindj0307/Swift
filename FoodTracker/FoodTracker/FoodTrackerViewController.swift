@@ -12,11 +12,12 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePi
 
     
     //MARK: - Properties
-    
-    @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var meal: Meal?
     
     //MARK: - Life Cycle
     
@@ -41,7 +42,13 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePi
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        mealNameLabel.text = textField.text
+        checkValidMealName()
+        navigationItem.title = textField.text
+
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        saveButton.enabled = false
     }
     
     
@@ -51,6 +58,11 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePi
     //MARK: - Event Response
     
     //MARK: - Private Methods
+    
+    func checkValidMealName() {
+        let text = nameTextField.text ?? ""
+        saveButton.enabled = !text.isEmpty
+    }
     
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
         // Hide the keyboard. 
@@ -63,7 +75,23 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePi
     }
 
     @IBAction func setDefaultLabelText(sender: UIButton) {
-        mealNameLabel.text = "Default Text"
+
+    }
+    
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if saveButton === sender {
+            let name = nameTextField.text ?? ""
+            let photo = photoImageView.image
+            let rating = ratingControl.rating
+            
+            meal = Meal(name: name, photo: photo, rating: rating)
+        }
+    }
+
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true , completion: nil )
     }
     //MARK: - Getters/Setters
     
@@ -74,7 +102,17 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePi
         
         nameTextField.delegate = self
 
+      
+        
+        if let meal = meal {
+            navigationItem.title = meal.name
+            nameTextField.text = meal.name
+            photoImageView.image = meal.photo
+            ratingControl.rating = meal.rating
+        }
+        
         // Do any additional setup after loading the view.
+        checkValidMealName()
     }
 
     override func didReceiveMemoryWarning() {
