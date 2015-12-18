@@ -21,8 +21,13 @@ class MealTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadSampleMeals()
-
+        navigationItem.leftBarButtonItem = editButtonItem()
+        
+        if let saveMeals = loadMeals() {
+            meals += saveMeals
+        } else {
+            loadSampleMeals()
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -50,12 +55,10 @@ class MealTableViewController: UITableViewController {
     
     // MARK: - TableView Delegate
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return meals.count
     }
     
@@ -72,6 +75,25 @@ class MealTableViewController: UITableViewController {
         
         return cell
     }
+    
+    // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            meals.removeAtIndex(indexPath.row)
+            saveMeals()
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
+
     // MARK: - Custom Delegate
     
     // MARK: - TableView Datasource
@@ -80,20 +102,18 @@ class MealTableViewController: UITableViewController {
     
     // MARK: - Private Methods
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
-       
-        
         if let sourceViewController = sender.sourceViewController as? FoodTrackerViewController, meal = sourceViewController.meal {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 meals[selectedIndexPath.row] = meal
-                tableView.insertRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             }
             else {
                 let newIndexPath = NSIndexPath(forRow: meals.count, inSection: 0)
-                
                 meals.append(meal)
-                
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            
+            saveMeals()
         }
     }
     
@@ -116,30 +136,17 @@ class MealTableViewController: UITableViewController {
     
     // MARK: - Getters/Setters
 
-
-    /*
-
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    // MARK: - NSCoding
+    func saveMeals() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(meals, toFile: Meal.ArchivURUL.path!)
+        if !isSuccessfulSave {
+            print("failed to save meals...")
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func loadMeals() ->[Meal]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchivURUL.path!) as? [Meal]
     }
-    */
 
     /*
     // Override to support rearranging the table view.

@@ -50,9 +50,7 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePi
     func textFieldDidBeginEditing(textField: UITextField) {
         saveButton.enabled = false
     }
-    
-    
-    //func
+
     //MARK: - TableView Datasource
     
     //MARK: - Event Response
@@ -91,7 +89,13 @@ class FoodTrackerViewController: UIViewController,UITextFieldDelegate, UIImagePi
     }
 
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true , completion: nil )
+        
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        if isPresentingInAddMealMode {
+            dismissViewControllerAnimated(true , completion: nil )
+        } else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
     //MARK: - Getters/Setters
     

@@ -22,6 +22,9 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="8XU-af-tf7">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UCU-th-0Q0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
@@ -57,7 +60,6 @@
                             <constraint firstItem="SuC-5U-5u9" firstAttribute="top" secondItem="8XU-af-tf7" secondAttribute="bottom" constant="8" id="PjR-Xw-1cJ"/>
                             <constraint firstItem="SuC-5U-5u9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qfw-Xo-r1x"/>
                             <constraint firstItem="iYT-WE-CUO" firstAttribute="top" secondItem="SuC-5U-5u9" secondAttribute="bottom" constant="8" id="Rbt-i3-HML"/>
-                            <constraint firstItem="8XU-af-tf7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="TOL-Lt-afu"/>
                             <constraint firstItem="SuC-5U-5u9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-15" id="c23-Ud-gEP"/>
                             <constraint firstAttribute="trailing" secondItem="SuC-5U-5u9" secondAttribute="trailing" id="d8O-Wg-Bp1"/>
                             <constraint firstItem="iYT-WE-CUO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:3" id="ha8-xT-arT"/>
@@ -72,7 +74,6 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="TOL-Lt-afu"/>
                                 <exclude reference="28f-JN-5Kn"/>
                                 <exclude reference="Qfw-Xo-r1x"/>
                                 <exclude reference="d8O-Wg-Bp1"/>
@@ -86,7 +87,7 @@
                             </mask>
                         </variation>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="hkw-A4-aNU" appends="YES" id="WZG-8z-1Yv"/>
+                            <outletCollection property="gestureRecognizers" destination="hkw-A4-aNU" appends="YES" id="ElY-Uc-Ni6"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="e24-IA-6A7">
@@ -113,11 +114,11 @@
                 <tapGestureRecognizer id="hkw-A4-aNU">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="LS2-ci-VEv"/>
-                        <outlet property="delegate" destination="8bC-Xf-vdC" id="cvA-8d-i6N"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="eeG-4S-eWl"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2715" y="370"/>
+            <point key="canvasLocation" x="2573" y="235"/>
         </scene>
         <!--Your Meals-->
         <scene sceneID="STX-nm-t4Y">
@@ -160,7 +161,7 @@
                                     <outlet property="nameLabel" destination="niG-fx-wxr" id="6Qk-Gw-1o7"/>
                                     <outlet property="photoImageView" destination="nhg-34-1wS" id="dUk-bh-96A"/>
                                     <outlet property="ratingControl" destination="ui7-mJ-wcJ" id="BQM-vW-l5K"/>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="ShowDetail" id="rcY-TQ-egO"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="z6S-mp-oDf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -172,14 +173,14 @@
                     <navigationItem key="navigationItem" title="Your Meals" id="klR-Uo-aQM">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AgS-Ql-uwA">
                             <connections>
-                                <segue destination="6rI-df-GIV" kind="show" identifier="" id="Upw-zF-PaM"/>
+                                <segue destination="6rI-df-GIV" kind="show" identifier="AddItem" id="Upw-zF-PaM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gkz-KK-WAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="370"/>
+            <point key="canvasLocation" x="1394" y="280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jef-Pr-qiz">
@@ -224,6 +225,6 @@
         <image name="defaultPhoto" width="220" height="140"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rcY-TQ-egO"/>
+        <segue reference="z6S-mp-oDf"/>
     </inferredMetricsTieBreakers>
 </document>
