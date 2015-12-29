@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Gestures-->
@@ -28,7 +29,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gestures" image="moive" id="UxC-9O-X5v"/>
+                    <tabBarItem key="tabBarItem" title="Gestures" image="4" id="UxC-9O-X5v"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0f-Dz-NkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,35 +55,74 @@
             </objects>
             <point key="canvasLocation" x="-147" y="196"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Players-->
         <scene sceneID="MaY-2k-kBO">
             <objects>
-                <tableViewController id="h5O-6x-rG4" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dne-ON-zAu">
+                <tableViewController id="h5O-6x-rG4" customClass="PlayersViewController" customModule="Ratings" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dne-ON-zAu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Joey" textLabel="e4Z-Ec-EQc" style="IBUITableViewCellStyleDefault" id="LkH-aD-USy">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="60" id="LkH-aD-USy" customClass="PlayerCell" customModule="Ratings" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LkH-aD-USy" id="mzI-C7-hek">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e4Z-Ec-EQc">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="y65-Gm-qqh">
+                                            <rect key="frame" x="28" y="8" width="286" height="43"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LHS-Vg-X1T">
+                                                    <rect key="frame" x="0.0" y="0.0" width="205" height="43"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ8-tc-5hj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="205" height="29"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxq-XQ-8Gb">
+                                                            <rect key="frame" x="0.0" y="29" width="205" height="14"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <animations/>
+                                                </stackView>
+                                                <imageView userInteractionEnabled="NO" tag="102" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rcf-5U-R1W">
+                                                    <rect key="frame" x="205" y="0.0" width="81" height="43"/>
+                                                    <animations/>
+                                                </imageView>
+                                            </subviews>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <constraints>
+                                                <constraint firstItem="LHS-Vg-X1T" firstAttribute="top" secondItem="y65-Gm-qqh" secondAttribute="top" id="FYy-ZT-eRz"/>
+                                                <constraint firstItem="LHS-Vg-X1T" firstAttribute="leading" secondItem="y65-Gm-qqh" secondAttribute="leading" id="N31-f4-496"/>
+                                                <constraint firstAttribute="bottom" secondItem="LHS-Vg-X1T" secondAttribute="bottom" id="XHx-pr-aHJ"/>
+                                                <constraint firstItem="Rcf-5U-R1W" firstAttribute="leading" secondItem="LHS-Vg-X1T" secondAttribute="trailing" id="yyf-rn-Yee"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="y65-Gm-qqh" secondAttribute="trailing" constant="20" id="0nI-Zw-gsz"/>
+                                        <constraint firstItem="y65-Gm-qqh" firstAttribute="leading" secondItem="mzI-C7-hek" secondAttribute="leadingMargin" constant="20" id="KKe-Ae-GuU"/>
+                                        <constraint firstItem="y65-Gm-qqh" firstAttribute="top" secondItem="mzI-C7-hek" secondAttribute="topMargin" id="aDj-sl-0N2"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="y65-Gm-qqh" secondAttribute="bottom" id="xRn-XF-N7O"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="gameLabel" destination="Oxq-XQ-8Gb" id="2da-y6-Nsf"/>
+                                    <outlet property="nameLabel" destination="NJ8-tc-5hj" id="9gR-IQ-PgQ"/>
+                                    <outlet property="ratingImageView" destination="Rcf-5U-R1W" id="CYq-m4-5JU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -90,17 +130,19 @@
                             <outlet property="delegate" destination="h5O-6x-rG4" id="BRz-sT-iEO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="UZM-Hs-ipJ"/>
+                    <navigationItem key="navigationItem" title="Players" id="UZM-Hs-ipJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fN8-99-jUG"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sdb-vE-gwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="-224"/>
+            <point key="canvasLocation" x="1257.5" y="-224.5"/>
         </scene>
         <!--Players-->
         <scene sceneID="57g-h4-TiM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Xc-V8-Mpd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Players" image="Boom" id="mvv-FD-XKu"/>
+                    <tabBarItem key="tabBarItem" title="Players" image="1" id="mvv-FD-XKu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DRR-6E-pD8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -118,7 +160,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Boom" width="24" height="24"/>
-        <image name="moive" width="24" height="24"/>
+        <image name="1" width="22" height="22"/>
+        <image name="4" width="22" height="22"/>
     </resources>
 </document>
