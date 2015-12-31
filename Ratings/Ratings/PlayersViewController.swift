@@ -29,6 +29,7 @@ class PlayersViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
     
     // MARK: - TableView Delegate
@@ -66,6 +67,31 @@ class PlayersViewController: UITableViewController {
         */
         return cell
     }
+    
+    // MARK: - Navigation
+    @IBAction func cancelToPlayersViewController(segue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func savePlayerDetail(segue:UIStoryboardSegue) {
+        if let playerDetailsViewController = segue.sourceViewController as? PlayerDetailsViewController {
+            if let player = playerDetailsViewController.player {
+                players.append(player)
+                
+                let indexPath = NSIndexPath(forRow: players.count - 1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+        }
+        
+    }
+    
+    /*
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
+    }
+    */
     
     /*
     // Override to support conditional editing of the table view.
@@ -112,14 +138,6 @@ class PlayersViewController: UITableViewController {
     
     // MARK: - Getters/Setters
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
