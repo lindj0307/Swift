@@ -12,6 +12,16 @@
 		D45B66221C40069900C2238F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45B66201C40069900C2238F /* Main.storyboard */; };
 		D45B66241C40069900C2238F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D45B66231C40069900C2238F /* Assets.xcassets */; };
 		D45B66271C40069900C2238F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45B66251C40069900C2238F /* LaunchScreen.storyboard */; };
+		D45B66351C408CF900C2238F /* photo1.png in Resources */ = {isa = PBXBuildFile; fileRef = D45B662F1C408CF900C2238F /* photo1.png */; };
+		D45B66361C408CF900C2238F /* photo2.png in Resources */ = {isa = PBXBuildFile; fileRef = D45B66301C408CF900C2238F /* photo2.png */; };
+		D45B66371C408CF900C2238F /* photo3.png in Resources */ = {isa = PBXBuildFile; fileRef = D45B66311C408CF900C2238F /* photo3.png */; };
+		D45B66381C408CF900C2238F /* photo4.png in Resources */ = {isa = PBXBuildFile; fileRef = D45B66321C408CF900C2238F /* photo4.png */; };
+		D45B66391C408CF900C2238F /* photo5.png in Resources */ = {isa = PBXBuildFile; fileRef = D45B66331C408CF900C2238F /* photo5.png */; };
+		D45B663A1C408CF900C2238F /* slow.png in Resources */ = {isa = PBXBuildFile; fileRef = D45B66341C408CF900C2238F /* slow.png */; };
+		D45B663C1C44D85E00C2238F /* CustomScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B663B1C44D85E00C2238F /* CustomScrollViewController.swift */; };
+		D45B663E1C44DE0700C2238F /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B663D1C44DE0700C2238F /* PagedScrollViewController.swift */; };
+		D45B66401C44EF5700C2238F /* peekPagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B663F1C44EF5700C2238F /* peekPagedScrollViewController.swift */; };
+		D45B66421C44F1A700C2238F /* ScrollViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45B66411C44F1A700C2238F /* ScrollViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		D45B66231C40069900C2238F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D45B66261C40069900C2238F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D45B66281C40069900C2238F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D45B662F1C408CF900C2238F /* photo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo1.png; sourceTree = "<group>"; };
+		D45B66301C408CF900C2238F /* photo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo2.png; sourceTree = "<group>"; };
+		D45B66311C408CF900C2238F /* photo3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo3.png; sourceTree = "<group>"; };
+		D45B66321C408CF900C2238F /* photo4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo4.png; sourceTree = "<group>"; };
+		D45B66331C408CF900C2238F /* photo5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo5.png; sourceTree = "<group>"; };
+		D45B66341C408CF900C2238F /* slow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slow.png; sourceTree = "<group>"; };
+		D45B663B1C44D85E00C2238F /* CustomScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomScrollViewController.swift; sourceTree = "<group>"; };
+		D45B663D1C44DE0700C2238F /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
+		D45B663F1C44EF5700C2238F /* peekPagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = peekPagedScrollViewController.swift; sourceTree = "<group>"; };
+		D45B66411C44F1A700C2238F /* ScrollViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +74,32 @@
 		D45B661B1C40069900C2238F /* RWScrollViews */ = {
 			isa = PBXGroup;
 			children = (
+				D45B662E1C408CF900C2238F /* ScrollViewsResources */,
 				D45B661C1C40069900C2238F /* AppDelegate.swift */,
 				D45B661E1C40069900C2238F /* ViewController.swift */,
+				D45B663B1C44D85E00C2238F /* CustomScrollViewController.swift */,
 				D45B66201C40069900C2238F /* Main.storyboard */,
 				D45B66231C40069900C2238F /* Assets.xcassets */,
 				D45B66251C40069900C2238F /* LaunchScreen.storyboard */,
 				D45B66281C40069900C2238F /* Info.plist */,
+				D45B663D1C44DE0700C2238F /* PagedScrollViewController.swift */,
+				D45B663F1C44EF5700C2238F /* peekPagedScrollViewController.swift */,
+				D45B66411C44F1A700C2238F /* ScrollViewContainer.swift */,
 			);
 			path = RWScrollViews;
+			sourceTree = "<group>";
+		};
+		D45B662E1C408CF900C2238F /* ScrollViewsResources */ = {
+			isa = PBXGroup;
+			children = (
+				D45B662F1C408CF900C2238F /* photo1.png */,
+				D45B66301C408CF900C2238F /* photo2.png */,
+				D45B66311C408CF900C2238F /* photo3.png */,
+				D45B66321C408CF900C2238F /* photo4.png */,
+				D45B66331C408CF900C2238F /* photo5.png */,
+				D45B66341C408CF900C2238F /* slow.png */,
+			);
+			path = ScrollViewsResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +160,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D45B66381C408CF900C2238F /* photo4.png in Resources */,
+				D45B66361C408CF900C2238F /* photo2.png in Resources */,
+				D45B663A1C408CF900C2238F /* slow.png in Resources */,
+				D45B66351C408CF900C2238F /* photo1.png in Resources */,
 				D45B66271C40069900C2238F /* LaunchScreen.storyboard in Resources */,
+				D45B66391C408CF900C2238F /* photo5.png in Resources */,
 				D45B66241C40069900C2238F /* Assets.xcassets in Resources */,
+				D45B66371C408CF900C2238F /* photo3.png in Resources */,
 				D45B66221C40069900C2238F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D45B661F1C40069900C2238F /* ViewController.swift in Sources */,
+				D45B66401C44EF5700C2238F /* peekPagedScrollViewController.swift in Sources */,
+				D45B663E1C44DE0700C2238F /* PagedScrollViewController.swift in Sources */,
 				D45B661D1C40069900C2238F /* AppDelegate.swift in Sources */,
+				D45B663C1C44D85E00C2238F /* CustomScrollViewController.swift in Sources */,
+				D45B66421C44F1A700C2238F /* ScrollViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +299,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RWScrollViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -262,6 +311,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.RWScrollViews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
