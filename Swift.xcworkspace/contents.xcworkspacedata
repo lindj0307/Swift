@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <FileRef
-      location = "group:RWScrollViews/RWScrollViews.xcodeproj">
-   </FileRef>
+   <Group
+      location = "container:"
+      name = "Raywenderlich tutorial">
+      <FileRef
+         location = "group:CandySearch/CandySearch.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:RWScrollViews/RWScrollViews.xcodeproj">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:AdaptiveWeather/AdaptiveWeather.xcodeproj">
    </FileRef>
