@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HealthKitTutorial.xcscheme</key>
+		<key>MathMonsters.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>9</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>D44B12C21BF3220C008A48C3</key>
+		<key>D4FE1B321C4DEC0000C66ABE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

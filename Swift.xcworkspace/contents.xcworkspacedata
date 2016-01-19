@@ -5,7 +5,7 @@
       location = "container:"
       name = "Raywenderlich tutorial">
       <FileRef
-         location = "group:CALayerPlayground/CALayerPlayground.xcodeproj">
+         location = "group:MathMonsters/MathMonsters.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:CandySearch/CandySearch.xcodeproj">
