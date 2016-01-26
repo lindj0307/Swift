@@ -5,6 +5,9 @@
       location = "container:"
       name = "Raywenderlich tutorial">
       <FileRef
+         location = "group:Grapevine/Grapevine.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Pinterest/Pinterest.xcodeproj">
       </FileRef>
       <FileRef
