@@ -19,6 +19,7 @@
 		BB3B33D81B4049EC00B5C810 /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B33D71B4049EC00B5C810 /* ViewControllerProvider.swift */; };
 		BB3B33DB1B4056B700B5C810 /* Pets.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB3B33DA1B4056B700B5C810 /* Pets.plist */; };
 		BB3B33DD1B4064E600B5C810 /* PetCardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B33DC1B4064E600B5C810 /* PetCardStore.swift */; };
+		D450C19A1C61D7F900711AD5 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450C1991C61D7F900711AD5 /* FlipPresentAnimationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BB3B33D71B4049EC00B5C810 /* ViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
 		BB3B33DA1B4056B700B5C810 /* Pets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Pets.plist; sourceTree = "<group>"; };
 		BB3B33DC1B4064E600B5C810 /* PetCardStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCardStore.swift; sourceTree = "<group>"; };
+		D450C1991C61D7F900711AD5 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		BB3B33DE1B40654700B5C810 /* Animation controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D450C1991C61D7F900711AD5 /* FlipPresentAnimationController.swift */,
 			);
 			path = "Animation controllers";
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				0491592A1B5E88A000B6827E /* AnimationHelper.swift in Sources */,
 				BB3B33DD1B4064E600B5C810 /* PetCardStore.swift in Sources */,
 				BB3B33CD1B4038ED00B5C810 /* RevealViewController.swift in Sources */,
+				D450C19A1C61D7F900711AD5 /* FlipPresentAnimationController.swift in Sources */,
 				BB3B33D41B403BAF00B5C810 /* PetCard.swift in Sources */,
 				BB3B33A81B40386700B5C810 /* AppDelegate.swift in Sources */,
 				BB3B33D81B4049EC00B5C810 /* ViewControllerProvider.swift in Sources */,

@@ -26,29 +26,70 @@ private let revealSequeId = "revealSegue"
 
 class CardViewController: UIViewController {
   
-  @IBOutlet private weak var cardView: UIView!
-  @IBOutlet private weak var titleLabel: UILabel!
-  
-  var pageIndex: Int?
-  var petCard: PetCard?
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    @IBOutlet private weak var cardView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
     
-    titleLabel.text = petCard?.description
-    cardView.layer.cornerRadius = 25
-    cardView.layer.masksToBounds = true
-    let tapRecognizer = UITapGestureRecognizer(target: self, action: "handleTap")
-    cardView.addGestureRecognizer(tapRecognizer)
-  }
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == revealSequeId, let destinationViewController = segue.destinationViewController as? RevealViewController {
-      destinationViewController.petCard = petCard
+    private let flipPresentAnimationController = FlipPresentAnimationController()
+    
+
+    var pageIndex: Int?
+    var petCard: PetCard?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        titleLabel.text = petCard?.description
+        cardView.layer.cornerRadius = 25
+        cardView.layer.masksToBounds = true
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "handleTap")
+        cardView.addGestureRecognizer(tapRecognizer)
     }
-  }
   
-  func handleTap() {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == revealSequeId, let destinationViewController = segue.destinationViewController as? RevealViewController {
+        destinationViewController.petCard = petCard
+        destinationViewController.transitioningDelegate = self
+    }
+    }
+
+    func handleTap() {
     performSegueWithIdentifier(revealSequeId, sender: nil)
-  }
+    }
 }
+
+
+extension CardViewController: UIViewControllerTransitioningDelegate {
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        flipPresentAnimationController.originFrame = cardView.frame
+        return flipPresentAnimationController
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
