@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var describeText: UITextView!
+    @IBOutlet weak var describeText: UITextView!
     // MARK: - Variable
     
     // MARK: - Properties

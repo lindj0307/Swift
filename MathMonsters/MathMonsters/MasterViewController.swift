@@ -13,10 +13,12 @@ protocol MonsterSelectionDelegate: class {
     func monsterSelected(newMonster:Monster)
 }
 
+@IBOutlet weak var btnStone: UIButton!
 class MasterViewController: UITableViewController {
     
     // MARK: - Variable
     
+    @IBOutlet var firstImageTapGestureRecognize: UITapGestureRecognizer!
     // MARK: - Properties
     var monsters = [Monster]()
     weak var delegate: MonsterSelectionDelegate?

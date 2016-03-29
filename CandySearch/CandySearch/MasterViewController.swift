@@ -33,6 +33,7 @@ class MasterViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     var filteredCandies = [Candy]()
     
+
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -60,6 +61,7 @@ class MasterViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
+        @IBOutlet weak var navigationView: UIView!
         
 
     }
@@ -169,3 +171,5 @@ extension MasterViewController: UISearchBarDelegate {
 
 
 
+@IBAction func sendFirstImage(sender: UITapGestureRecognizer) {
+}

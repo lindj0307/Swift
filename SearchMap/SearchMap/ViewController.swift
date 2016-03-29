@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         self.btnHotel.alpha = 0
         self.btnHospital.alpha = 0
         self.btnSM.alpha = 0
+        
         btnHotel.layer.cornerRadius = 12
         btnHospital.layer.cornerRadius = 12
         btnSM.layer.cornerRadius = 12

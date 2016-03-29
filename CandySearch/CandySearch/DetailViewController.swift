@@ -13,6 +13,7 @@
 *
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+@IBOutlet weak var describeText: UITextView!
 @IBOutlet weak var nameLabel: UILabel!
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
@@ -25,33 +26,33 @@ import UIKit
 
 class DetailViewController: UIViewController {
   
-  @IBOutlet weak var detailDescriptionLabel: UILabel!
-  @IBOutlet weak var candyImageView: UIImageView!
+    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var candyImageView: UIImageView!
   
-  var detailCandy: Candy? {
-    didSet {
-      configureView()
+    var detailCandy: Candy? {
+        didSet {
+            configureView()
+        }
     }
-  }
   
-  func configureView() {
-    if let detailCandy = detailCandy {
-      if let detailDescriptionLabel = detailDescriptionLabel, candyImageView = candyImageView {
-        detailDescriptionLabel.text = detailCandy.name
-        candyImageView.image = UIImage(named: detailCandy.name)
-        title = detailCandy.category
-      }
+    func configureView() {
+        if let detailCandy = detailCandy {
+          if let detailDescriptionLabel = detailDescriptionLabel, candyImageView = candyImageView {
+            detailDescriptionLabel.text = detailCandy.name
+            candyImageView.image = UIImage(named: detailCandy.name)
+            title = detailCandy.category
+          }
+        }
     }
-  }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    configureView()
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureView()
+    }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
   
 }
 
