@@ -20,16 +20,16 @@ enum CardRating: Int {
 }
 
 enum CardCategory: Int {
-    case Durid = 0
-    case Mage = 1
-    case Paladin = 2
-    case Priest = 3
-    case Rogue = 4
-    case Shaman = 5
-    case Warrior = 6
-    case Hunter = 7
-    case Warlock = 8
-    case Common = 9
+    case Durid = 1
+    case Mage = 2
+    case Paladin = 3
+    case Priest = 4
+    case Rogue = 5
+    case Shaman = 6
+    case Warrior = 7
+    case Hunter = 8
+    case Warlock = 9
+    case Common = 10
 }
 
 

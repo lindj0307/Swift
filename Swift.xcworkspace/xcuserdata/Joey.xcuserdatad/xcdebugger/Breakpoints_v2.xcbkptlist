@@ -682,11 +682,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
+            timestampString = "480934459.629699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -698,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480912907.319222"
+            timestampString = "481024285.757669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "394"
+            endingLineNumber = "394"
             landmarkName = "MasterViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -714,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
+            timestampString = "480934459.629699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -730,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
+            timestampString = "480934459.629699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -746,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
+            timestampString = "480992894.602487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -762,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
+            timestampString = "480992894.602487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -788,11 +788,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
-            timestampString = "480827881.468019"
+            timestampString = "481024285.757669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "DetailViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -804,11 +804,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
+            timestampString = "480992894.602487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -820,44 +820,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480912907.319222"
+            timestampString = "480996087.016703"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "searchBar(_:selectedScopeButtonIndexDidChange:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "filterContentForSearchText(_:scope:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480911634.937551"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "filterContentForSearchText(_:scope:)"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "filterContentForSearchText(_:scope:role:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -868,12 +836,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
-            timestampString = "480912907.319222"
+            timestampString = "481024285.757669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "initUI()"
+            startingLineNumber = "287"
+            endingLineNumber = "287"
+            landmarkName = "buttonReset(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
+            timestampString = "480996087.016703"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "filterContentForSearchText(_:scope:role:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/MasterViewController.swift"
+            timestampString = "481024317.671636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
+            timestampString = "481024378.981088"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
+            timestampString = "481024418.185821"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "configureFirstCard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
+            timestampString = "481024420.424675"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "configureSecondCard()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
+            timestampString = "481024422.447508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "configureThirdCard()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
