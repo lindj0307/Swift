@@ -43,6 +43,8 @@ class DetailViewController: UIViewController {
                     cardImageView.image = image
                 })
                 title = firstCard.category
+                
+                firstText.contentOffset = CGPointZero
             }
         }
     }
@@ -56,19 +58,23 @@ class DetailViewController: UIViewController {
                     cardImageView.image = image
                 })
                 title = secondCard.category
+                
+                secondText.contentOffset = CGPointZero
             }
         }
     }
     
     func configureThirdCard() {
         if let thirdCard = thirdCard {
-            if let  describeText = secondText, cardImageView = thirdImageView {
+            if let  describeText = thirdText, cardImageView = thirdImageView {
                 describeText.text = "\(thirdCard.rating) \n\(thirdCard.describe)"
                 
                 ImageLoader.sharedLoader.imageForUrl(thirdCard.url, completionHandler:{(image: UIImage?, url: String) in
                     cardImageView.image = image
                 })
                 title = thirdCard.category
+                
+                thirdText.contentOffset = CGPointZero
             }
         }
     }

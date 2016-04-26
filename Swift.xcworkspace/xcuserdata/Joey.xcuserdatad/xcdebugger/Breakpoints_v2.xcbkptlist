@@ -884,11 +884,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
-            timestampString = "481024378.981088"
+            timestampString = "481706422.825013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -916,11 +916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
-            timestampString = "481024420.424675"
+            timestampString = "481706422.825013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "configureSecondCard()"
             landmarkType = "5">
          </BreakpointContent>
@@ -932,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TrumpsArenaTierList/TrumpsArenaTierList/DetailViewController.swift"
-            timestampString = "481024422.447508"
+            timestampString = "481706422.825013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "configureThirdCard()"
             landmarkType = "5">
          </BreakpointContent>
