@@ -23,6 +23,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var amountSlider: UISlider!
   
   // MARK: - Constants
   private let horizontalPadding: CGFloat = 15.0
