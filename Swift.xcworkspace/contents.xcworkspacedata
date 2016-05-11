@@ -8,6 +8,9 @@
       location = "container:"
       name = "Raywenderlich tutorial">
       <FileRef
+         location = "group:DynamicToss/DynamicToss.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Flo/Flo.xcodeproj">
       </FileRef>
       <FileRef
