@@ -8,6 +8,9 @@
       location = "container:"
       name = "Raywenderlich tutorial">
       <FileRef
+         location = "group:HalfTunes/HalfTunes.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:SurfJournal/SurfJournal.xcodeproj">
       </FileRef>
       <FileRef
